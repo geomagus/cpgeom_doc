@@ -1,327 +1,176 @@
+<!doctype html>
+<html data-bs-theme="">
+    <head>
+                <title>Site de documentation CPGEOM</title>
 
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
-
-
-
-
-
-<!DOCTYPE html lang="en">
-
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  
-
-  
-  <meta http-equiv="content-language" content="en">
-  
-  
-
-  
-  <title>Site de documentation CPGEOM | Site de documentation CPGEOM</title>
-  
-
-  
-
-  
-  
-
-<link rel="stylesheet" href="css/bootstrap-icons.min.css">
-<link rel="stylesheet" href="css/theme.css">
-
-
-<link rel="stylesheet" href="css/colors/auto.css">
-<link rel="stylesheet" href="css/highlight/default.css" media="(prefers-color-scheme: light)">
-<link rel="stylesheet" href="css/highlight/monokai.css" media="(prefers-color-scheme: dark)">
-
-
-
-
-
-<script async>var base_url = '.';</script>
-<script src="js/jquery-3.6.1.slim.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script async src="js/highlight.min.js"></script>
-  
-  
-  
-</head>
-
-<body    <header>
-  <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 ">
-    <div class="container">
-      <a class="navbar-brand text-body" asp-area="" href=" /">
-        
-        
-        Site de documentation CPGEOM
-        
-      </a>
-      <div class="print-hide">
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-          <div class="d-none d-md-flex input-group mb-3">
+            <meta name="description" content="None">
             
-            <input class="form-control" type="search" id="searchbox" accesskey="/"
-              placeholder="Search in here" aria-label="Search"
-              aria-describedby="search-btn" />
-            <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="search(false);">
-              <i class="bi bi-search"></i>
-            </button>
             
-          </div>
+
+            
+                <link  rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+            
+
+        <script>var base_url = '.';</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/root.min.css">
+            <link rel="stylesheet" href="assets/css/main.min.css">
+            <link rel="stylesheet" href="assets/css/media.min.css">
+            <link rel="stylesheet" href="assets/css/mkdocstrings.min.css">
+                <script src="search/main.js"></script>
+
+            
+                
+            
+          
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+
+        
+            <span class=" fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">Site de documentation CPGEOM</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class=" active 
+                            nav-link text-gray text-decoration-none" href=".">[Site de documentation CPGEOM]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="topic1/">[La Géoplateforme de l'IGN]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="topic2/">[Sujet 2]</a>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
         </div>
-      </div>
     </div>
-  </nav>
-  <nav class="navbar border-bottom box-shadow mb-3 d-md-none print-hide">
-    <div class="container">
-      <div class="navbar-collapse d-flex">
-        <p>
-        <div class="d-flex input-group mb-3">
-          
-          <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse"
-            data-bs-target="#nav" title="Show Navigation"><i class="bi bi-book"></i></button>
-          
-          
-          <input class="form-control" type="search" id="searchbox_mobile" accesskey="/"
-            placeholder="Search in here" aria-label="Search">
-          <button class="btn btn-outline-secondary" type="button" onclick="search(true);"><i
-              class="bi bi-search"></i></button>
-          
-          
-          <button class="btn btn-outline-secondary" onclick="toggle_toc(this);" type="button" data-bs-toggle="collapse"
-            data-bs-target="#toc"><i class="bi bi-list-ul"></i></button>
-          
-        </div>
-        </p>
-      </div>
-    </div>
-  </nav>
-  </header>
-  
-  
-  
-  
-  <div class="container">
-    <div class="pb-3">
-      <div class="row">
-        
-        
-        
+</nav>
+<!--  endblock -->
+            </header>
 
-<div class="col-12 col-md-2 print-hide">
-    <div class="collapse d-md-block text-nowrap" id="nav" style="overflow-x:scroll;">
-        <ul class="list-group list-group-flush">
-            
-            
-            <li class="list-group-item"><a
-                    class="text-decoration-none  text-body"
-                    href=".">Site de documentation CPGEOM</a></li>
-            
-            
-            
-            <li class="list-group-item"><a
-                    class="text-decoration-none  text-muted"
-                    href="topic1/">La Géoplateforme de l'IGN</a></li>
-            
-            
-            
-            <li class="list-group-item"><a
-                    class="text-decoration-none  text-muted"
-                    href="topic2/">Sujet 2</a></li>
-            
-            
-        </ul>
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
     </div>
 </div>
-        
-        
-        
+<!-- endblock -->
 
+                
+                        <!-- block content -->
+<section class="container post" id="component-content">
+    <article>
+        <header>
+            
+                <h1 class=" title" id="component-title">Site de documentation CPGEOM</h1>
+            
+        </header>
+        <p><h1 id="site-de-documentation-cpgeom">Site de documentation CPGEOM</h1></p>
+    </article>
+</section>
+<!-- endblock -->
+                
+                
+            </main>
 
+            
+                    <!-- block preview -->
+    <div class="preview row row-cols-md-3 text-center pt-md-3" id="component-preview">
+        <div class="col themed-grid-col">
+            <a rel="prev" class="nav-link disabled">
+                <i class="fa fa-arrow-left"></i> Previous
+            </a>
+        </div>
+        <div class="col themed-grid-col"></div>
+        <div class="col themed-grid-col">
+            <a rel="next" href="topic1/" class="nav-link">
+                Next <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+<!-- endblock -->
+            
 
-
-<div class="col-12 col-md-2 order-md-3 print-hide">
-  <div class="collapse d-md-block text-nowrap" id="toc" style="overflow-x:scroll;">
-    <span>In this article</span>
-    <hr />
-    <ul class="list-group list-group-flush">
-      
-      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#site-de-documentation-cpgeom">Site de documentation CPGEOM</a>
-        
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-
-<main role="main" class="col-12 col-md-8 print-main">
-  
-  
-  <h1 >Site de documentation CPGEOM</h1>
-  
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">Site de documentation CPGEOM</li>
-      
-      
-      <li class="breadcrumb-item active" aria-current="page">Site de documentation CPGEOM</li>
-      
-      
-      
-      
-      
-      
-      
-    </ol>
-  </nav>
-  
-  
-  <div class="container ml-0">
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
     <div class="row">
-      
-      <div class="col-2 px-0" style="text-wrap: nowrap;">
-        
-        <a class="btn text-muted print-hide"><i class="bi bi-chevron-left"></i></a>
-        
-        
-        <a class="btn text-primary print-hide" href="topic1/" title="La Géoplateforme de l'IGN"><i
-            class="bi bi-chevron-right"></i></a>
-        
-      </div>
-      <div class="col px-0" style="text-align: right;">
-        
-        
-        
-        
-        
-        
-        <button class="btn print-visible d-none" onclick="print_normal();"
-          title="Open NewTab"><i class="bi bi-arrow-up-right-square"></i></button>
-      </div>
-      <div class="col-1 col-sm-2 px-0 print-hide" style="text-align: right;text-wrap: nowrap;">
-        
-        
-        <a class="btn disabled print-hide d-none d-sm-inline"><i class="bi bi-pencil"></i></a>
-        
-        
-        
-        <button class="btn print-block d-none d-lg-inline" title="Print this article"
-          onclick="window.print();"><i class="bi bi-printer"></i></button>
-        
-        <span class="dropdown print-hide">
-          <button class="btn btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-            aria-expanded="false"><i class="bi bi-list"></i></button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <h6 class="dropdown-header">Share via</h6>
-            </li>
-            <li><button class="btn dropdown-item"
-                onclick="share_to_twitter('Site de documentation CPGEOM | Site de documentation CPGEOM','');"><i
-                  class="bi bi-twitter-x"></i>&nbsp;X.com</button></li>
-            <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i
-                  class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
-            <li><button class="btn dropdown-item" onclick="share_to_line();"><i
-                  class="bi bi-line"></i>&nbsp;LINE</button></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><button class="btn dropdown-item" onclick="window.print();"><i class="bi bi-printer"></i>&nbsp;Print</button></li>
-            <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;Copy Url to clipboard</button></li>
-            <li>
-              
-              
-              <a class="btn dropdown-item disabled"><i class="bi bi-pencil"></i>&nbsp;Edit this article</a>
-              
-              
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
             
-            <li><button class="btn dropdown-item" onclick="print_view();"><i
-                  class="bi bi-file-earmark-text"></i>&nbsp;View in EmbedMode</button></li>
-          </ul>
-        </span>
-      </div>
-    </div>
-  </div>
-  
-  <hr />
-  
-  <div >
-    
-    <h1 id="site-de-documentation-cpgeom">Site de documentation CPGEOM</h1>
-    
-  </div>
-</main>
-
-      </div>
-    </div>
-    <script src="js/theme.js"></script>
-    
-    
-    
-    <script async src="search/main.js"></script>
-    
-    
-  </div>
-  </div>
-
-  
-  
-  
-  
-  <footer class="border-top footer text-muted .position-absolute.bottom-0.start-50.translate-middle-x"
-    style="padding-top:15px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md">
-          
         </div>
-        
-      </div>
-    </div>
-  </footer>
-  
-  
-  
-  
-  
-  <div class="modal fade" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="searchModal" aria-hidden="true">
-    <div class="modal-dialog modal-lg print-hide">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="searchModalLabel">Search</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="input-group mb-3">
-                    <input id="mkdocs-search-query" type="text" class="form-control"
-                        aria-label="Search" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div id="mkdocs-search-results">
-                    search-area-desc
-                </div>
 
-            </div>
-        </div>
-    </div>
-</div>
-  
-</body>
+            <script src="assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="assets/js/bootstrap.bundle.min.js""></script>
+            <script src="assets/js/main.min.js""></script>
+                <script src="search/main.js" defer></script>
+
+    </body>
 
 </html>
