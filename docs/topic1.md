@@ -62,10 +62,10 @@ La Géoplateforme fournit plusieurs services standards OGC :
 
 ## 💻 4. Exemple d’utilisation (Leaflet + WMTS)
 
-<html>
+<html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Carte ortho IGN</title>
+  <title>Carte Ortho IGN avec Chatbot</title>
 
   <!-- Leaflet CSS -->
   <link
@@ -73,37 +73,66 @@ La Géoplateforme fournit plusieurs services standards OGC :
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
     #map {
       width: 100%;
       height: 500px;
+    }
+    #chatbot {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      width: 250px;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    #chatbot input {
+      width: calc(100% - 22px);
+      padding: 5px;
+      margin-top: 5px;
+    }
+    #chatbot button {
+      margin-top: 5px;
+      width: 100%;
+      padding: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #chatbot button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
 
-<h2>Ortho IGN</h2>
+<h2 style="text-align:center;">Carte Ortho IGN avec Chatbot</h2>
 <div id="map"></div>
+
+<div id="chatbot">
+  <label for="locationInput">Saisir un lieu :</label>
+  <input type="text" id="locationInput" placeholder="Ex: Paris, Eiffel Tower">
+  <button id="goButton">Aller à la localisation</button>
+  <div id="chatOutput" style="margin-top:10px;font-size:0.9em;color:#333;"></div>
+</div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script>
   // Création de la carte centrée sur Paris
   var map = L.map("map").setView([48.8566, 2.3522], 12);
 
-  // Couche Plan IGN (WMTS ouvert)
-//   L.tileLayer(
-//     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
-//       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
-//       "&STYLE=normal&FORMAT=image/png" +
-//       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
-//     {
-//       maxZoom: 18,
-//       attribution: "© IGN - Géoportail",
-//       tileSize: 256,
-//     }
-//   ).addTo(map);
-
+  // Couche Ortho IGN
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
       "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
@@ -116,6 +145,48 @@ La Géoplateforme fournit plusieurs services standards OGC :
     }
   ).addTo(map);
 
+  var marker; // Pour le marqueur dynamique
+
+  // Fonction pour géocoder un lieu
+  async function geocodePlace(place) {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(place)}`;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data && data.length > 0) {
+        const lat = parseFloat(data[0].lat);
+        const lon = parseFloat(data[0].lon);
+
+        // Déplacer la carte et ajouter le marqueur
+        map.setView([lat, lon], 16);
+        if (marker) map.removeLayer(marker);
+        marker = L.marker([lat, lon]).addTo(map)
+                  .bindPopup(`<b>${place}</b>`).openPopup();
+
+        document.getElementById("chatOutput").innerText = `Localisation trouvée : ${lat.toFixed(5)}, ${lon.toFixed(5)}`;
+      } else {
+        document.getElementById("chatOutput").innerText = "Lieu non trouvé. Essayez une autre requête.";
+      }
+    } catch (error) {
+      document.getElementById("chatOutput").innerText = "Erreur de géocodage.";
+      console.error(error);
+    }
+  }
+
+  // Événement bouton
+  document.getElementById("goButton").addEventListener("click", () => {
+    const place = document.getElementById("locationInput").value;
+    if (place.trim() !== "") {
+      geocodePlace(place);
+    }
+  });
+
+  // Permet appuyer sur "Entrée" pour valider
+  document.getElementById("locationInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      document.getElementById("goButton").click();
+    }
+  });
 </script>
 
 </body>
