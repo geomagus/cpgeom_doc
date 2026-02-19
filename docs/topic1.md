@@ -62,7 +62,6 @@ La Géoplateforme fournit plusieurs services standards OGC :
 
 ## 💻 4. Exemple d’utilisation (Leaflet + WMTS)
 
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
