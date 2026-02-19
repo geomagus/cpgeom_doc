@@ -66,7 +66,7 @@ La Géoplateforme fournit plusieurs services standards OGC :
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Carte IGN Open Sans Clé</title>
+  <title>Carte ortho IGN</title>
 
   <!-- Leaflet CSS -->
   <link
@@ -82,7 +82,7 @@ La Géoplateforme fournit plusieurs services standards OGC :
 </head>
 <body>
 
-<h2>Fond IGN (Plan / Orthophotos) sans clé</h2>
+<h2>Ortho IGN</h2>
 <div id="map"></div>
 
 <!-- Leaflet JS -->
@@ -93,20 +93,18 @@ La Géoplateforme fournit plusieurs services standards OGC :
   var map = L.map("map").setView([48.8566, 2.3522], 12);
 
   // Couche Plan IGN (WMTS ouvert)
-  L.tileLayer(
-    "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
-      "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
-      "&STYLE=normal&FORMAT=image/png" +
-      "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
-    {
-      maxZoom: 18,
-      attribution: "© IGN - Géoportail",
-      tileSize: 256,
-    }
-  ).addTo(map);
+//   L.tileLayer(
+//     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+//       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+//       "&STYLE=normal&FORMAT=image/png" +
+//       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+//     {
+//       maxZoom: 18,
+//       attribution: "© IGN - Géoportail",
+//       tileSize: 256,
+//     }
+//   ).addTo(map);
 
-  // Décommenter si tu veux ajouter aussi les orthophotos
-  /*
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
       "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
@@ -118,7 +116,7 @@ La Géoplateforme fournit plusieurs services standards OGC :
       tileSize: 256,
     }
   ).addTo(map);
-  */
+
 </script>
 
 </body>
