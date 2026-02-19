@@ -3,12 +3,8 @@ use_directory_urls: false
 
 
 theme: 
-  name: shadcn
+  name: readthedocs
 
-nav:
-  - index.md
-  - topic1.md
-  - "... | rest"
 
 plugins:
   - search
