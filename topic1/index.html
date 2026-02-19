@@ -1,115 +1,309 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  
+
+  
+  <meta http-equiv="content-language" content="en">
+  
+  
+
+  
+  <title>La Géoplateforme de l'IGN | Site de documentation CPGEOM</title>
+  
+
+  
+
+  
+  
+
+<link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../css/theme.css">
+
+
+<link rel="stylesheet" href="../css/colors/auto.css">
+<link rel="stylesheet" href="../css/highlight/default.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="../css/highlight/monokai.css" media="(prefers-color-scheme: dark)">
+
+
+
+
+
+<script async>var base_url = '..';</script>
+<script src="../js/jquery-3.6.1.slim.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script async src="../js/highlight.min.js"></script>
+  
+  
+  
+</head>
+
+<body    <header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 ">
+    <div class="container">
+      <a class="navbar-brand text-body" asp-area="" href="../ /">
         
         
+        Site de documentation CPGEOM
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>La Géoplateforme de l'IGN - Site de documentation CPGEOM</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../css/brands.min.css" rel="stylesheet">
-        <link href="../css/solid.min.css" rel="stylesheet">
-        <link href="../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">Site de documentation CPGEOM</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href=".." class="nav-link">Site de documentation CPGEOM</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">La Géoplateforme de l'IGN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../topic2/" class="nav-link">Sujet 2</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../topic2/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
+      </a>
+      <div class="print-hide">
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+          <div class="d-none d-md-flex input-group mb-3">
+            
+            <input class="form-control" type="search" id="searchbox" accesskey="/"
+              placeholder="Search in here" aria-label="Search"
+              aria-describedby="search-btn" />
+            <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="search(false);">
+              <i class="bi bi-search"></i>
+            </button>
+            
+          </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
+      </div>
     </div>
+  </nav>
+  <nav class="navbar border-bottom box-shadow mb-3 d-md-none print-hide">
+    <div class="container">
+      <div class="navbar-collapse d-flex">
+        <p>
+        <div class="d-flex input-group mb-3">
+          
+          <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse"
+            data-bs-target="#nav" title="Show Navigation"><i class="bi bi-book"></i></button>
+          
+          
+          <input class="form-control" type="search" id="searchbox_mobile" accesskey="/"
+            placeholder="Search in here" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="button" onclick="search(true);"><i
+              class="bi bi-search"></i></button>
+          
+          
+          <button class="btn btn-outline-secondary" onclick="toggle_toc(this);" type="button" data-bs-toggle="collapse"
+            data-bs-target="#toc"><i class="bi bi-list-ul"></i></button>
+          
+        </div>
+        </p>
+      </div>
+    </div>
+  </nav>
+  </header>
+  
+  
+  
+  
+  <div class="container">
+    <div class="pb-3">
+      <div class="row">
+        
+        
+        
 
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
+<div class="col-12 col-md-2 print-hide">
+    <div class="collapse d-md-block text-nowrap" id="nav" style="overflow-x:scroll;">
+        <ul class="list-group list-group-flush">
             
-            <li class="nav-item" data-bs-level="1"><a href="#la-geoplateforme-de-lign" class="nav-link">La Géoplateforme de l'IGN</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#geoportail-geoplateforme-de-lign" class="nav-link">🌍 Géoportail / Géoplateforme de l’IGN</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#1-quest-ce-que-la-geoplateforme" class="nav-link">📌 1. Qu’est-ce que la Géoplateforme ?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#2-types-de-donnees-disponibles" class="nav-link">🗺️ 2. Types de données disponibles</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#3-services-web-disponibles" class="nav-link">🔌 3. Services Web disponibles</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#4-exemple-dutilisation-leaflet-wmts" class="nav-link">💻 4. Exemple d’utilisation (Leaflet + WMTS)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-muted"
+                    href="..">Site de documentation CPGEOM</a></li>
+            
+            
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-body"
+                    href="./">La Géoplateforme de l'IGN</a></li>
+            
+            
+            
+            <li class="list-group-item"><a
+                    class="text-decoration-none  text-muted"
+                    href="../topic2/">Sujet 2</a></li>
+            
+            
         </ul>
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+</div>
+        
+        
+        
 
-<h1 id="la-geoplateforme-de-lign">La Géoplateforme de l'IGN</h1>
+
+
+
+<div class="col-12 col-md-2 order-md-3 print-hide">
+  <div class="collapse d-md-block text-nowrap" id="toc" style="overflow-x:scroll;">
+    <span>In this article</span>
+    <hr />
+    <ul class="list-group list-group-flush">
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#la-geoplateforme-de-lign">La Géoplateforme de l'IGN</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#geoportail-geoplateforme-de-lign">🌍 Géoportail / Géoplateforme de l’IGN</a>
+        
+        <ul class="list-group list-group-flush">
+          
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#1-quest-ce-que-la-geoplateforme">📌 1. Qu’est-ce que la Géoplateforme ?</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#2-types-de-donnees-disponibles">🗺️ 2. Types de données disponibles</a>
+        
+        <ul class="list-group list-group-flush">
+          
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#orthophotos">🛰️ Orthophotos</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#cartes-topographiques">🗺️ Cartes topographiques</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#donnees-altimetriques-mnt">🌊 Données altimétriques (MNT)</a>
+        
+      </li>
+      
+        </ul>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#3-services-web-disponibles">🔌 3. Services Web disponibles</a>
+        
+      </li>
+      
+      <li class="list-group-item"><a class="text-decoration-none text-muted" href="#4-exemple-dutilisation-leaflet-wmts">💻 4. Exemple d’utilisation (Leaflet + WMTS)</a>
+        
+      </li>
+      
+        </ul>
+        
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<main role="main" class="col-12 col-md-8 print-main">
+  
+  
+  <h1 >La Géoplateforme de l'IGN</h1>
+  
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Site de documentation CPGEOM</li>
+      
+      
+      
+      
+      <li class="breadcrumb-item active" aria-current="page">La Géoplateforme de l'IGN</li>
+      
+      
+      
+      
+      
+    </ol>
+  </nav>
+  
+  
+  <div class="container ml-0">
+    <div class="row">
+      
+      <div class="col-2 px-0" style="text-wrap: nowrap;">
+        
+        <a class="btn text-primary print-hide" href=".."
+          title="Site de documentation CPGEOM"><i class="bi bi-chevron-left"></i></a>
+        
+        
+        <a class="btn text-primary print-hide" href="../topic2/" title="Sujet 2"><i
+            class="bi bi-chevron-right"></i></a>
+        
+      </div>
+      <div class="col px-0" style="text-align: right;">
+        
+        
+        
+        
+        
+        
+        <button class="btn print-visible d-none" onclick="print_normal();"
+          title="Open NewTab"><i class="bi bi-arrow-up-right-square"></i></button>
+      </div>
+      <div class="col-1 col-sm-2 px-0 print-hide" style="text-align: right;text-wrap: nowrap;">
+        
+        
+        <a class="btn disabled print-hide d-none d-sm-inline"><i class="bi bi-pencil"></i></a>
+        
+        
+        
+        <button class="btn print-block d-none d-lg-inline" title="Print this article"
+          onclick="window.print();"><i class="bi bi-printer"></i></button>
+        
+        <span class="dropdown print-hide">
+          <button class="btn btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false"><i class="bi bi-list"></i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <h6 class="dropdown-header">Share via</h6>
+            </li>
+            <li><button class="btn dropdown-item"
+                onclick="share_to_twitter('La Géoplateforme de l'IGN | Site de documentation CPGEOM','');"><i
+                  class="bi bi-twitter-x"></i>&nbsp;X.com</button></li>
+            <li><button class="btn dropdown-item" onclick="share_to_facebook();"><i
+                  class="bi bi-facebook"></i>&nbsp;Facebook</button></li>
+            <li><button class="btn dropdown-item" onclick="share_to_line();"><i
+                  class="bi bi-line"></i>&nbsp;LINE</button></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><button class="btn dropdown-item" onclick="window.print();"><i class="bi bi-printer"></i>&nbsp;Print</button></li>
+            <li><button class="btn dropdown-item" id="page-url-copy-btn"><i class="bi bi-clipboard"></i>&nbsp;Copy Url to clipboard</button></li>
+            <li>
+              
+              
+              <a class="btn dropdown-item disabled"><i class="bi bi-pencil"></i>&nbsp;Edit this article</a>
+              
+              
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            
+            <li><button class="btn dropdown-item" onclick="print_view();"><i
+                  class="bi bi-file-earmark-text"></i>&nbsp;View in EmbedMode</button></li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <hr />
+  
+  <div >
+    
+    <h1 id="la-geoplateforme-de-lign">La Géoplateforme de l'IGN</h1>
 <p><img alt="Logo géoplateforme" src="../assets/logo_geoplateforme.jpg" title="logo géoplateforme" /></p>
 <h1 id="geoportail-geoplateforme-de-lign">🌍 Géoportail / Géoplateforme de l’IGN</h1>
 <p>Bienvenue sur la page de documentation simplifiée de la <strong>Géoplateforme de l’IGN</strong>.<br />
@@ -170,23 +364,23 @@ Elle est développée et maintenue par l’IGN (Institut national de l'informati
 </table>
 <hr />
 <h2 id="4-exemple-dutilisation-leaflet-wmts">💻 4. Exemple d’utilisation (Leaflet + WMTS)</h2>
-<html>
+<p><html>
 <head>
   <meta charset="utf-8">
-  <title>Carte ortho IGN</title>
-
-  <!-- Leaflet CSS -->
-  <link
+  <title>Carte ortho IGN</title></p>
+<!-- Leaflet CSS -->
+<p><link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
-  <style>
+<br />
+<style>
     #map {
       width: 100%;
       height: 500px;
     }
-  </style>
-</head>
+  </style></p>
+<p></head></p>
 <body>
 
 <h2>Ortho IGN</h2>
@@ -227,82 +421,66 @@ Elle est développée et maintenue par l’IGN (Institut national de l'informati
 </script>
 
 </body>
-</html></div>
-            </div>
-        </div>
+<p></html></p>
+    
+  </div>
+</main>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js"></script>
-        <script src="../search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+      </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <script src="../js/theme.js"></script>
+    
+    
+    
+    <script async src="../search/main.js"></script>
+    
+    
+  </div>
+  </div>
+
+  
+  
+  
+  
+  <footer class="border-top footer text-muted .position-absolute.bottom-0.start-50.translate-middle-x"
+    style="padding-top:15px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  
+  <div class="modal fade" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="searchModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg print-hide">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
+                <div class="input-group mb-3">
+                    <input id="mkdocs-search-query" type="text" class="form-control"
+                        aria-label="Search" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div id="mkdocs-search-results">
+                    search-area-desc
+                </div>
+
             </div>
         </div>
     </div>
 </div>
+  
+</body>
 
-    </body>
 </html>
