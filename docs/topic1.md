@@ -78,27 +78,23 @@ La Géoplateforme fournit plusieurs services standards OGC :
       margin: 0;
       padding: 0;
     }
-    #map {
-      width: 100%;
-      height: 500px;
-    }
+
     #chatbot {
-      position: absolute;
-      top: 20px;
-      right: 20px;
       background: rgba(255,255,255,0.95);
       border: 1px solid #ccc;
       border-radius: 8px;
       padding: 10px;
-      width: 250px;
-      z-index: 1000;
+      width: 300px;         /* largeur du chatbot */
+      margin: 10px auto;    /* centre horizontalement avec un petit espace */
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
+
     #chatbot input {
       width: calc(100% - 22px);
       padding: 5px;
       margin-top: 5px;
     }
+
     #chatbot button {
       margin-top: 5px;
       width: 100%;
@@ -109,22 +105,31 @@ La Géoplateforme fournit plusieurs services standards OGC :
       border-radius: 4px;
       cursor: pointer;
     }
+
     #chatbot button:hover {
       background-color: #45a049;
+    }
+
+    #map {
+      width: 100%;
+      height: 500px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
 <h2 style="text-align:center;">Carte Ortho IGN avec Chatbot</h2>
-<div id="map"></div>
 
+<!-- Chatbot placé juste au-dessus de la carte -->
 <div id="chatbot">
   <label for="locationInput">Saisir un lieu :</label>
   <input type="text" id="locationInput" placeholder="Ex: Paris, Eiffel Tower">
   <button id="goButton">Aller à la localisation</button>
   <div id="chatOutput" style="margin-top:10px;font-size:0.9em;color:#333;"></div>
 </div>
+
+<div id="map"></div> <!-- Carte juste en dessous du chatbot -->
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -191,4 +196,5 @@ La Géoplateforme fournit plusieurs services standards OGC :
 
 </body>
 </html>
+
 
