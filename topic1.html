@@ -36,11 +36,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Topic2 - Site de documentation CPGEOM</title>
+    <title>Topic1 - Site de documentation CPGEOM</title>
     
 
 
-<title>Topic2</title>
+<title>Topic1</title>
 
 
 
@@ -53,7 +53,7 @@
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Topic2">
+<meta property="og:title" content="Topic1">
 
 
 
@@ -66,7 +66,7 @@
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Topic2">
+<meta name="twitter:title" content="Topic1">
 
 
 
@@ -77,16 +77,16 @@
 
 
 
-    <link rel="icon" href="../img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
 
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/geist.css" rel="stylesheet">
-
-    
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/geist.css" rel="stylesheet">
 
     
 
-    <script src="../js/callbacks.js"></script>
+    
+
+    <script src="js/callbacks.js"></script>
 
     
 
@@ -288,7 +288,7 @@
                 
                 
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
+    <a data-slot="sidebar-menu-button" data-active="true" data-sidebar="menu-button"
         data-size="default" href="None"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
@@ -307,7 +307,7 @@
                 
                 
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="true" data-sidebar="menu-button"
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
         data-size="default" href="None"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
@@ -347,12 +347,12 @@
         <h1
           class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl"
         >
-          Topic2
+          Topic1
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
           
-<button onclick="fetch(`/topic2.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))" 
+<button onclick="fetch(`/topic1.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))" 
         data-slot="button" 
         class="cursor-pointer inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md gap-1.5 px-3 has-[&>svg]:px-2.5 h-8 shadow-none md:h-7 md:text-[0.8rem]">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
@@ -387,6 +387,31 @@
           </a>
            
           
+          <a
+            data-slot="button"
+            id="next-button"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
+            href="None"
+          >
+            <span class="sr-only">Next</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tabler-icon tabler-icon-arrow-right"
+            >
+              <path d="M5 12l14 0"></path>
+              <path d="M13 18l6 -6"></path>
+              <path d="M13 6l6 6"></path>
+            </svg>
+          </a>
+          
         </div>
       </div>
       
@@ -396,7 +421,124 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    
+    <p><img alt="Logo géoplateforme" src="assets/logo_geoplateforme.jpg" title="logo géoplateforme" /></p>
+<h1 id="geoportail-geoplateforme-de-lign">🌍 Géoportail / Géoplateforme de l’IGN</h1>
+<p>Bienvenue sur la page de documentation simplifiée de la <strong>Géoplateforme de l’IGN</strong>.<br />
+Cette page présente les objectifs, les fonctionnalités principales et des exemples d’utilisation.</p>
+<hr />
+<h2 id="1-quest-ce-que-la-geoplateforme">📌 1. Qu’est-ce que la Géoplateforme ?</h2>
+<p>La <strong>Géoplateforme</strong> est l’infrastructure nationale de diffusion des données géographiques en France.<br />
+Elle est développée et maintenue par l’IGN (Institut national de l'information géographique et forestière).</p>
+<p>Elle permet :</p>
+<ul>
+<li>📡 L’accès à des données géographiques officielles</li>
+<li>🗺️ La visualisation de cartes interactives</li>
+<li>🔌 L’intégration de services cartographiques via API</li>
+<li>📂 Le téléchargement de jeux de données</li>
+</ul>
+<hr />
+<h2 id="2-types-de-donnees-disponibles">🗺️ 2. Types de données disponibles</h2>
+<p>La plateforme propose différents types de données :</p>
+<h3 id="orthophotos">🛰️ Orthophotos</h3>
+<p>Images aériennes haute résolution.</p>
+<p><img alt="Exemple d'orthophoto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Orthophoto_example.jpg/640px-Orthophoto_example.jpg" /></p>
+<hr />
+<h3 id="cartes-topographiques">🗺️ Cartes topographiques</h3>
+<p>Cartes détaillées avec relief, routes, bâtiments, etc.</p>
+<p><img alt="Carte topographique" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Topographic_map_example.png/640px-Topographic_map_example.png" /></p>
+<hr />
+<h3 id="donnees-altimetriques-mnt">🌊 Données altimétriques (MNT)</h3>
+<p>Modèles numériques de terrain (MNT) pour représenter le relief.</p>
+<p><img alt="Modèle numérique de terrain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Digital_Elevation_Model_example.png/640px-Digital_Elevation_Model_example.png" /></p>
+<hr />
+<h2 id="3-services-web-disponibles">🔌 3. Services Web disponibles</h2>
+<p>La Géoplateforme fournit plusieurs services standards OGC :</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WMS</td>
+<td>Service de visualisation d’images cartographiques</td>
+</tr>
+<tr>
+<td>WMTS</td>
+<td>Service tuilé pour affichage rapide</td>
+</tr>
+<tr>
+<td>WFS</td>
+<td>Service d’accès aux données vectorielles</td>
+</tr>
+<tr>
+<td>API REST</td>
+<td>Accès programmatique aux données</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="4-exemple-dutilisation-leaflet-wmts">💻 4. Exemple d’utilisation (Leaflet + WMTS)</h2>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Carte ortho IGN</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Ortho IGN</h2>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // Création de la carte centrée sur Paris
+  var map = L.map("map").setView([48.8566, 2.3522], 12);
+
+  // Couche Plan IGN (WMTS ouvert)
+//   L.tileLayer(
+//     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+//       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+//       "&STYLE=normal&FORMAT=image/png" +
+//       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+//     {
+//       maxZoom: 18,
+//       attribution: "© IGN - Géoportail",
+//       tileSize: 256,
+//     }
+//   ).addTo(map);
+
+  L.tileLayer(
+    "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+      "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
+      "&STYLE=normal&FORMAT=image/jpeg" +
+      "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+    {
+      maxZoom: 18,
+      attribution: "© IGN - Géoportail",
+      tileSize: 256,
+    }
+  ).addTo(map);
+
+</script>
+
+</body>
+</html>
   </div>
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
@@ -411,9 +553,22 @@
             <path d="M5 12l6 6"></path>
             <path d="M5 12l6 -6"></path>
         </svg>
-        <span class="max-[500px]:hidden">Topic1</span>
+        <span class="max-[500px]:hidden">Home</span>
     </a>
     
+    
+    <a data-slot="button"
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
+        href="None">
+        <span class="max-[500px]:hidden">Topic2</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tabler-icon tabler-icon-arrow-right ">
+            <path d="M5 12l14 0"></path>
+            <path d="M13 18l6 -6"></path>
+            <path d="M13 6l6 6"></path>
+        </svg>
+    </a>
     
 </div>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -432,19 +587,19 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href="..">
+                    <a class="text-2xl font-medium" href="index.html">
                         
                         Home
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="../topic1/">
+                    <a class="text-2xl font-medium" href="topic1.html">
                         
                         Topic1
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="./">
+                    <a class="text-2xl font-medium" href="topic2.html">
                         
                         Topic2
                         
@@ -467,6 +622,64 @@
                                 <div view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#1-quest-ce-que-la-geoplateforme"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            📌 1. Qu’est-ce que la Géoplateforme ?
+        </a>
+        
+
+        
+        <a href="#2-types-de-donnees-disponibles"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            🗺️ 2. Types de données disponibles
+        </a>
+        
+        
+        <a href="#orthophotos"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            🛰️ Orthophotos
+        </a>
+        
+        <a href="#cartes-topographiques"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            🗺️ Cartes topographiques
+        </a>
+        
+        <a href="#donnees-altimetriques-mnt"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            🌊 Données altimétriques (MNT)
+        </a>
+        
+        
+
+        
+        <a href="#3-services-web-disponibles"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            🔌 3. Services Web disponibles
+        </a>
+        
+
+        
+        <a href="#4-exemple-dutilisation-leaflet-wmts"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            💻 4. Exemple d’utilisation (Leaflet + WMTS)
+        </a>
+        
+
+        
+        
+        
         
 
     </div>
@@ -493,12 +706,12 @@
     </div>
      
 
-<script src="../search/main.js"></script>
+<script src="search/main.js"></script>
 
 
     
 
-    <script src="../js/copy-button.js"></script>
+    <script src="js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     <script>fetchStargazers("None");</script>
