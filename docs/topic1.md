@@ -62,24 +62,65 @@ La Géoplateforme fournit plusieurs services standards OGC :
 
 ## 💻 4. Exemple d’utilisation (Leaflet + WMTS)
 
-```html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exemple Carte IGN</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <meta charset="utf-8">
+  <title>Carte IGN Open Sans Clé</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
 </head>
 <body>
-  <div id="map" style="height: 500px;"></div>
 
-  <script>
-    var map = L.map('map').setView([48.8566, 2.3522], 13);
+<h2>Fond IGN (Plan / Orthophotos) sans clé</h2>
+<div id="map"></div>
 
-    L.tileLayer('https://wxs.ign.fr/essentiels/geoportail/wmts?...', {
-      attribution: '© IGN'
-    }).addTo(map);
-  </script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // Création de la carte centrée sur Paris
+  var map = L.map("map").setView([48.8566, 2.3522], 12);
+
+  // Couche Plan IGN (WMTS ouvert)
+  L.tileLayer(
+    "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+      "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+      "&STYLE=normal&FORMAT=image/png" +
+      "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+    {
+      maxZoom: 18,
+      attribution: "© IGN - Géoportail",
+      tileSize: 256,
+    }
+  ).addTo(map);
+
+  // Décommenter si tu veux ajouter aussi les orthophotos
+  /*
+  L.tileLayer(
+    "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+      "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
+      "&STYLE=normal&FORMAT=image/jpeg" +
+      "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+    {
+      maxZoom: 18,
+      attribution: "© IGN - Géoportail",
+      tileSize: 256,
+    }
+  ).addTo(map);
+  */
+</script>
+
 </body>
 </html>
-```
+
