@@ -1,3 +1,15 @@
 site_name : Site de documentation CPGEOM
-theme:
+use_directory_urls: false
+
+
+theme: 
   name: shadcn
+
+nav:
+  - index.md
+  - topic1.md
+  - "... | rest"
+
+plugins:
+  - search
+  - awesome-pages
