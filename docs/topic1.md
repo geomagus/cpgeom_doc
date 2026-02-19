@@ -82,3 +82,4 @@ La Géoplateforme fournit plusieurs services standards OGC :
   </script>
 </body>
 </html>
+```
