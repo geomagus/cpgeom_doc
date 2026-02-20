@@ -42,4 +42,4 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - GPKG
 - WKT CRS 
 
-<img src="../assets/crs.png" alt="crs" width="100"/>
+<html><img src="../assets/crs.png" alt="crs" width="100"/></html>
