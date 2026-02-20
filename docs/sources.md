@@ -38,46 +38,39 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BD TOPO & BD ORTHO</title>
+  <title>BD TOPO & BD ORTHO - Comparateur</title>
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- CSS pour le plugin side-by-side -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-side-by-side@2.2.0/leaflet-side-by-side.css" />
   <style>
-    body {
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
-    }
-
-    /* Container pour les 2 cartes */
-    .map-container {
-      display: flex;           /* côte à côte */
-      gap: 10px;               /* espacement entre les cartes */
-      height: 500px;           /* hauteur des cartes */
-    }
-
-    #map, #map2 {
-      flex: 1;                 /* prennent la même largeur */
       height: 100%;
+    }
+    #map {
+      width: 100%;
+      height: 500px;
     }
   </style>
 </head>
 <body>
 
-<h3>Comparaison BD TOPO & BD ORTHO</h3>
-<div class="map-container">
-  <div id="map"></div>
-  <div id="map2"></div>
-</div>
+<h3>Comparaison BD TOPO & BD ORTHO avec glissière</h3>
+<div id="map"></div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<!-- Plugin pour synchroniser les cartes -->
-<script src="https://cdn.jsdelivr.net/gh/jieter/Leaflet.Sync/L.Map.Sync.js"></script>
+<!-- Plugin side-by-side -->
+<script src="https://unpkg.com/leaflet-side-by-side@2.2.0/leaflet-side-by-side.js"></script>
 
 <script>
-  // Carte BD TOPO
-  var map = L.map("map").setView([44.934, 6.322], 13);
-  L.tileLayer(
+  // Création de la carte
+  var map = L.map('map').setView([44.934, 6.322], 13);
+
+  // Couche BD TOPO
+  var topoLayer = L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
     "&STYLE=normal&FORMAT=image/png" +
@@ -89,9 +82,8 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
     }
   ).addTo(map);
 
-  // Carte BD ORTHO
-  var map2 = L.map("map2").setView([44.934, 6.322], 13);
-  L.tileLayer(
+  // Couche BD ORTHO
+  var orthoLayer = L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
     "&STYLE=normal&FORMAT=image/jpeg" +
@@ -101,11 +93,11 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
       attribution: "© IGN - Géoportail",
       tileSize: 256,
     }
-  ).addTo(map2);
+  );
 
-  // Synchronisation des cartes
-  map.sync(map2);
-  map2.sync(map);
+  // Création du comparateur avec glissière
+  var sideBySide = L.control.sideBySide(topoLayer, orthoLayer).addTo(map);
+
 </script>
 </body>
 </html>
