@@ -1,73 +1,65 @@
-# La Géoplateforme de l'IGN
-![Logo géoplateforme](assets/logo_geoplateforme.jpg "logo géoplateforme")
+# 📍 Sources de données 
 
-# 🌍 Géoportail / Géoplateforme de l’IGN
+## 1. Données satellitaires                                    
 
-Bienvenue sur la page de documentation simplifiée de la **Géoplateforme de l’IGN**.  
-Cette page présente les objectifs, les fonctionnalités principales et des exemples d’utilisation.
+### 🔭 Imagerie optique
+
+<div style="display: flex; gap: 20px; justify-content: flex-start; flex-wrap: nowrap;">
+
+  <img src="assets/spot.jpg" alt="Image 1"
+       style="flex: 1 1 0; max-width: 300px; height: auto;
+              border-radius: 20px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+              transition: transform 0.3s ease;">
+
+  <img src="assets/pleiades.jpg" alt="Image 2"
+       style="flex: 1 1 0; max-width: 300px; height: auto;
+              border-radius: 20px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+              transition: transform 0.3s ease;">
+
+  <img src="assets/neo.jpg" alt="Image 3"
+       style="flex: 1 1 0; max-width: 300px; height: auto;
+              border-radius: 20px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+              transition: transform 0.3s ease;">
+
+</div>
+
+| Constellation | Résolution | Fauchée | Capacité d'acqusition journalière
+|----------|-------------|-------------|-----------------|
+| **SPOT** | 1,5 m | 60 km | 3.000.000 km2 |
+| **Pléiades** | 70 cm | 20 km | 700.000 km2 |
+| **Pléiades** Neo | 30 cm | 14 km | 1.000.000 km2 |
+
+
+### 📡 Imagerie radar (SAR)
+L'imagerie radar est principalement utilisée pour la détection de mouvements de terrain ou pour permettre l'observation de la Terre quelque soit la météo. 
+
+---
+## 2. Métadonnées et catalogues
+
+Les méta-données jouent un rôle central dans les missions du service géomatique. Elles sont la colonne vertébrale des solutions suivantes, développées en interne :
+
+- **Catalogues de métadonnées** (ex. ISO 19115)  
+- **Services OGC** (WMS, WFS, CSW)  
+- **API de services géospatiaux**
+
+Ces outils facilitent la **recherche, l’interopérabilité et la diffusion** des données satellitaires.
 
 ---
 
-## 📌 1. Qu’est-ce que la Géoplateforme ?
+## 3. Données publiques & Open Data
 
-La **Géoplateforme** est l’infrastructure nationale de diffusion des données géographiques en France.  
-Elle est développée et maintenue par l’IGN (Institut national de l'information géographique et forestière).
+Le service géomatique s’appuie régulièrement sur des sources **libres ou institutionnelles**, telles que les données OpenStreetMap (OSM) et les données de référence suivantes :
 
-Elle permet :
+### 🗺️ Données de référence de l'IGN
 
-- 📡 L’accès à des données géographiques officielles
-- 🗺️ La visualisation de cartes interactives
-- 🔌 L’intégration de services cartographiques via API
-- 📂 Le téléchargement de jeux de données
-
----
-
-## 🗺️ 2. Types de données disponibles
-
-La plateforme propose différents types de données :
-
-### 🛰️ Orthophotos
-Images aériennes haute résolution.
-
-![Exemple d'orthophoto](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Orthophoto_example.jpg/640px-Orthophoto_example.jpg)
-
----
-
-### 🗺️ Cartes topographiques
-Cartes détaillées avec relief, routes, bâtiments, etc.
-
-![Carte topographique](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Topographic_map_example.png/640px-Topographic_map_example.png)
-
----
-
-### 🌊 Données altimétriques (MNT)
-Modèles numériques de terrain (MNT) pour représenter le relief.
-
-![Modèle numérique de terrain](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Digital_Elevation_Model_example.png/640px-Digital_Elevation_Model_example.png)
-
----
-
-## 🔌 3. Services Web disponibles
-
-La Géoplateforme fournit plusieurs services standards OGC :
-
-| Service | Description |
-|----------|-------------|
-| WMS | Service de visualisation d’images cartographiques |
-| WMTS | Service tuilé pour affichage rapide |
-| WFS | Service d’accès aux données vectorielles |
-| API REST | Accès programmatique aux données |
-
----
-
-## 💻 4. Exemple d’utilisation (Leaflet + WMTS)
-
-
-
+- **BD TOPO®**
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Carte ortho IGN</title>
+  <title>BD TOPO</title>
 
   <!-- Leaflet CSS -->
   <link
@@ -83,7 +75,6 @@ La Géoplateforme fournit plusieurs services standards OGC :
 </head>
 <body>
 
-<h2>Ortho IGN</h2>
 <div id="map"></div>
 
 <!-- Leaflet JS -->
@@ -94,17 +85,53 @@ La Géoplateforme fournit plusieurs services standards OGC :
   var map = L.map("map").setView([48.8566, 2.3522], 12);
 
   // Couche Plan IGN (WMTS ouvert)
-//   L.tileLayer(
-//     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
-//       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
-//       "&STYLE=normal&FORMAT=image/png" +
-//       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
-//     {
-//       maxZoom: 18,
-//       attribution: "© IGN - Géoportail",
-//       tileSize: 256,
-//     }
-//   ).addTo(map);
+   L.tileLayer(
+     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+       "&STYLE=normal&FORMAT=image/png" +
+       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+     {
+       maxZoom: 18,
+       attribution: "© IGN - Géoportail",
+       tileSize: 256,
+     }
+   ).addTo(map);
+
+
+</script>
+
+</body>
+</html>
+
+- **BD ORTHO®** 
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BD ORTHO</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // Création de la carte centrée sur Paris
+  var map = L.map("map").setView([48.8566, 2.3522], 12);
 
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
@@ -122,5 +149,8 @@ La Géoplateforme fournit plusieurs services standards OGC :
 
 </body>
 </html>
+ 
 
+
+---
 
