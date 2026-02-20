@@ -82,6 +82,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 
 </body>
 </html>
+<br>
 
 - **BD ORTHO®** 
 
@@ -111,7 +112,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 
 <script>
   // Création de la carte centrée sur Paris
-  var map2 = L.map("map").setView([48.8566, 2.3522], 12);
+  var map2 = L.map("map2").setView([48.8566, 2.3522], 12);
 
 
   L.tileLayer(
