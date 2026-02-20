@@ -38,10 +38,10 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BD TOPO & BD ORTHO - Comparateur</title>
+  <title>BD TOPO & BD ORTHO - Glissière</title>
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <!-- CSS pour le plugin side-by-side -->
+  <!-- CSS pour side-by-side -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet-side-by-side@2.2.0/leaflet-side-by-side.css" />
   <style>
     body, html {
@@ -57,7 +57,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 </head>
 <body>
 
-<h3>Comparaison BD TOPO & BD ORTHO avec glissière</h3>
+<h3>BD TOPO & BD ORTHO</h3>
 <div id="map"></div>
 
 <!-- Leaflet JS -->
@@ -69,7 +69,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
   // Création de la carte
   var map = L.map('map').setView([44.934, 6.322], 13);
 
-  // Couche BD TOPO
+  // Couche BD TOPO (à gauche)
   var topoLayer = L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
@@ -80,9 +80,9 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
       attribution: "© IGN - Géoportail",
       tileSize: 256,
     }
-  ).addTo(map);
+  ).addTo(map); // Ajout à la carte
 
-  // Couche BD ORTHO
+  // Couche BD ORTHO (à droite)
   var orthoLayer = L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
@@ -93,12 +93,12 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
       attribution: "© IGN - Géoportail",
       tileSize: 256,
     }
-  );
+  ); // Ne pas faire addTo(map) ici
 
-  // Création du comparateur avec glissière
-  var sideBySide = L.control.sideBySide(topoLayer, orthoLayer).addTo(map);
-
+  // Initialisation de la glissière
+  L.control.sideBySide(topoLayer, orthoLayer).addTo(map);
 </script>
+
 </body>
 </html>
  
