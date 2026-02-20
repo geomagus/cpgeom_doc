@@ -43,3 +43,6 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - WKT CRS 
 
 <html><img src="../assets/crs.png" alt="crs" width="100"/></html>
+
+### WMS vs WMTS 
+
