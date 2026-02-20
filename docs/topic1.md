@@ -61,7 +61,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
   // Carte BD TOPO
-  var map = L.map("map").setView([48.8566, 2.3522], 12);
+  var map = L.map("map").setView([44.934, 6.322], 13);
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
@@ -75,7 +75,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
   ).addTo(map);
 
   // Carte BD ORTHO
-  var map2 = L.map("map2").setView([48.8566, 2.3522], 12);
+  var map2 = L.map("map2").setView([44.934, 6.322], 13);
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
