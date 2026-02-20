@@ -70,10 +70,10 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 </head>
 <body>
 
-<h3>BD TOPO & BD ORTHO</h3>
+
 <div class="map-container">
-  <div id="map"></div>
-  <div id="map2"></div>
+  <div id="map"><h4>BD TOPO</h4></div>
+  <div id="map2"><h4>BD ORTHO</h4></div>
 </div>
 
 <!-- Leaflet JS -->
@@ -114,6 +114,6 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
   map.sync(map2);
   map2.sync(map);
 </script>
-
+<br>
 </body>
 </html>
