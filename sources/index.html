@@ -145,39 +145,53 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BD TOPO & BD ORTHO - Glissière</title>
+  <title>BD TOPO & BD ORTHO - Côté à côté</title>
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <!-- CSS pour side-by-side -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-side-by-side@2.2.0/leaflet-side-by-side.css" />
   <style>
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
+      font-family: sans-serif;
     }
-    #map {
-      width: 100%;
-      height: 500px;
+
+    h3 {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* Container pour les 2 cartes côte à côte */
+    .map-container {
+      display: flex;
+      gap: 10px;       /* espace entre les cartes */
+      height: 500px;   /* hauteur des cartes */
+      padding: 0 10px;
+    }
+
+    #map, #map2 {
+      flex: 1;         /* largeur égale */
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
 <h3>BD TOPO & BD ORTHO</h3>
-<div id="map"></div>
+<div class="map-container">
+  <div id="map"></div>
+  <div id="map2"></div>
+</div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<!-- Plugin side-by-side -->
-<script src="https://unpkg.com/leaflet-side-by-side@2.2.0/leaflet-side-by-side.js"></script>
+<!-- Plugin Leaflet.Sync pour synchroniser les cartes -->
+<script src="https://cdn.jsdelivr.net/gh/jieter/Leaflet.Sync/L.Map.Sync.js"></script>
 
 <script>
-  // Création de la carte
-  var map = L.map('map').setView([44.934, 6.322], 13);
-
-  // Couche BD TOPO (à gauche)
-  var topoLayer = L.tileLayer(
+  // Carte BD TOPO
+  var map = L.map("map").setView([44.934, 6.322], 13);
+  L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
     "&STYLE=normal&FORMAT=image/png" +
@@ -187,10 +201,11 @@
       attribution: "© IGN - Géoportail",
       tileSize: 256,
     }
-  ).addTo(map); // Ajout à la carte
+  ).addTo(map);
 
-  // Couche BD ORTHO (à droite)
-  var orthoLayer = L.tileLayer(
+  // Carte BD ORTHO
+  var map2 = L.map("map2").setView([44.934, 6.322], 13);
+  L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
     "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
     "&STYLE=normal&FORMAT=image/jpeg" +
@@ -200,16 +215,15 @@
       attribution: "© IGN - Géoportail",
       tileSize: 256,
     }
-  ); // Ne pas faire addTo(map) ici
+  ).addTo(map2);
 
-  // Initialisation de la glissière
-  L.control.sideBySide(topoLayer, orthoLayer).addTo(map);
+  // Synchronisation des cartes : zoom et déplacement
+  map.sync(map2);
+  map2.sync(map);
 </script>
 
 </body>
 </html>
-
-<hr />
               
             </div>
           </div><footer>
