@@ -6,19 +6,19 @@
 
 <div style="display: flex; gap: 20px; justify-content: flex-start; flex-wrap: nowrap;">
 
-  <img src="assets/spot.jpg" alt="Image 1"
+  <img src="../assets/spot.jpg" alt="Image 1"
        style="flex: 1 1 0; max-width: 300px; height: auto;
               border-radius: 20px;
               box-shadow: 0 8px 20px rgba(0,0,0,0.15);
               transition: transform 0.3s ease;">
 
-  <img src="assets/pleiades.jpg" alt="Image 2"
+  <img src="../assets/pleiades.jpg" alt="Image 2"
        style="flex: 1 1 0; max-width: 300px; height: auto;
               border-radius: 20px;
               box-shadow: 0 8px 20px rgba(0,0,0,0.15);
               transition: transform 0.3s ease;">
 
-  <img src="assets/neo.jpg" alt="Image 3"
+  <img src="../assets/neo.jpg" alt="Image 3"
        style="flex: 1 1 0; max-width: 300px; height: auto;
               border-radius: 20px;
               box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -132,6 +132,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 <script>
   // Création de la carte centrée sur Paris
   var map = L.map("map").setView([48.8566, 2.3522], 12);
+
 
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
