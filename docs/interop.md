@@ -40,6 +40,6 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - GML (Geography Markup Language)
 - KML
 - GPKG
-- WKT CRS
+- WKT CRS 
 
-![alt text](image-2.png){width=150px}
+<img src="../assets/crs.png" alt="crs" width="100"/>
