@@ -45,65 +45,7 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - WKT CRS 
 
 <html>
-<style>
-  .random-img {
-    position: absolute;
-    width: 100px;
-    cursor: grab;
-  }
-
-  .dragging {
-    cursor: grabbing;
-  }
-</style>
-
-<img id="crsImg" src="../assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
-
-<script>
-  const original = document.getElementById("crsImg");
-
-  original.addEventListener("click", function() {
-    const newImg = document.createElement("img");
-    newImg.src = "../assets/crs.png";
-    newImg.classList.add("random-img");
-
-    const maxWidth = window.innerWidth - 100;
-    const maxHeight = window.innerHeight - 100;
-
-    newImg.style.left = Math.random() * maxWidth + "px";
-    newImg.style.top = Math.random() * maxHeight + "px";
-
-    makeDraggable(newImg);
-
-    document.body.appendChild(newImg);
-  });
-
-  function makeDraggable(element) {
-
-    function onMouseMove(e) {
-      element.style.left = (e.clientX - offsetX) + "px";
-      element.style.top = (e.clientY - offsetY) + "px";
-    }
-
-    function onMouseUp() {
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseup", onMouseUp);
-      element.classList.remove("dragging");
-    }
-
-    let offsetX, offsetY;
-
-    element.addEventListener("mousedown", function(e) {
-      offsetX = e.clientX - element.offsetLeft;
-      offsetY = e.clientY - element.offsetTop;
-
-      element.classList.add("dragging");
-
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
-    });
-  }
-</script>
+<img id="crsImg" src="/assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
 </html>
 
 ## Catalogue / Métadonnées

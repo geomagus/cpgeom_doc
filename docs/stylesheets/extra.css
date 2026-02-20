@@ -1,13 +1,9 @@
-:root {
-  --md-primary-fg-color: #00695c;
-  --md-accent-fg-color: #ffb300;
+.md-header__button.md-logo img {
+  height: 2.2rem;   /* défaut ≈ 1.5rem */
 }
 
-.md-typeset h1 {
-  font-weight: 700;
-}
-
-.md-typeset h2 {
-  border-bottom: 2px solid var(--md-accent-fg-color);
-  padding-bottom: 0.3em;
+.random-img {
+  width: 100px;
+  cursor: grab;
+  z-index: 9999;
 }

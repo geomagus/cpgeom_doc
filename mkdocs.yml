@@ -5,8 +5,7 @@ site_author: "CPGEOM"
 theme:
   name: material
   language: fr
-  logo: assets/logo.png   # optionnel
-  favicon: assets/favicon.png  # optionnel
+  logo: assets/bg.png  
 
   palette:
 
@@ -60,12 +59,8 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/TON_REPO
-    - icon: fontawesome/solid/envelope
-      link: mailto:contact@cpgeom.fr
-
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/random-crs.js
