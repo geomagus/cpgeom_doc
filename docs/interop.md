@@ -7,7 +7,7 @@
 - Directives et recommandations : **INSPIRE** , ...
 - Partenariats et collaborations public/privé
 
-<html><img src="../assets/image-1.png" alt="crs" width="100"/></html>
+<html><img src="/assets/image-1.png" alt="ogc" width="250"/></html>
 
 ## 📜 Normes
 
@@ -118,3 +118,5 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - Transformations topologiques
 - Re-symbolisation
 - Géocodage
+
+

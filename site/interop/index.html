@@ -56,9 +56,11 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#formats-en-local">Formats (en local)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#wms-vs-wmts">WMS vs WMTS</a>
-    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#catalogue-metadonnees">Catalogue / Métadonnées</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spatial-etl-extract-transform-load">Spatial ETL : Extract Transform Load</a>
     </li>
     </ul>
                 </li>
@@ -98,7 +100,7 @@
 <li>Directives et recommandations : <strong>INSPIRE</strong> , ...</li>
 <li>Partenariats et collaborations public/privé</li>
 </ul>
-<html><img src="../assets/image-1.png" alt="crs" width="300"/></html>
+<html><img src="../assets/image-1.png" alt="crs" width="100"/></html>
 
 <h2 id="normes">📜 Normes</h2>
 <ul>
@@ -124,6 +126,7 @@
 <li>CS-W : Catalog Service Web</li>
 <li>WPS : Web Processing Service</li>
 </ul>
+<p><strong><em>GetCapabilities</em></strong> : retourne les métadonnées du service (couches proposées, projections associées, auteur…)</p>
 <h3 id="formats-en-local">Formats (en local)</h3>
 <ul>
 <li>SLD (style associé à un Web Sevice)</li>
@@ -132,9 +135,83 @@
 <li>GPKG</li>
 <li>WKT CRS </li>
 </ul>
-<html><img src="../assets/crs.png" alt="crs" width="100"/></html>
+<html>
+<style>
+  .random-img {
+    position: absolute;
+    width: 100px;
+    cursor: grab;
+  }
 
-<h3 id="wms-vs-wmts">WMS vs WMTS</h3>
+  .dragging {
+    cursor: grabbing;
+  }
+</style>
+
+<img id="crsImg" src="../assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
+
+<script>
+  const original = document.getElementById("crsImg");
+
+  original.addEventListener("click", function() {
+    const newImg = document.createElement("img");
+    newImg.src = "../assets/crs.png";
+    newImg.classList.add("random-img");
+
+    const maxWidth = window.innerWidth - 100;
+    const maxHeight = window.innerHeight - 100;
+
+    newImg.style.left = Math.random() * maxWidth + "px";
+    newImg.style.top = Math.random() * maxHeight + "px";
+
+    makeDraggable(newImg);
+
+    document.body.appendChild(newImg);
+  });
+
+  function makeDraggable(element) {
+
+    function onMouseMove(e) {
+      element.style.left = (e.clientX - offsetX) + "px";
+      element.style.top = (e.clientY - offsetY) + "px";
+    }
+
+    function onMouseUp() {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+      element.classList.remove("dragging");
+    }
+
+    let offsetX, offsetY;
+
+    element.addEventListener("mousedown", function(e) {
+      offsetX = e.clientX - element.offsetLeft;
+      offsetY = e.clientY - element.offsetTop;
+
+      element.classList.add("dragging");
+
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    });
+  }
+</script>
+</html>
+
+<h2 id="catalogue-metadonnees">Catalogue / Métadonnées</h2>
+<ul>
+<li>Données de <strong>qualité</strong> (exhaustives, propres, géométriquement correctes)</li>
+<li>Données <strong>documentées</strong> (normes 19115, 19139, INSPIRE)</li>
+<li>Données <strong>diffusables</strong> (catalogue)</li>
+<li>Données <strong>réutilisables</strong> (accessibles, ouvertes)</li>
+</ul>
+<h2 id="spatial-etl-extract-transform-load">Spatial ETL : Extract Transform Load</h2>
+<ul>
+<li>Reprojection</li>
+<li>Transformations spatiales</li>
+<li>Transformations topologiques</li>
+<li>Re-symbolisation</li>
+<li>Géocodage</li>
+</ul>
               
             </div>
           </div><footer>

@@ -2,7 +2,7 @@ site_name : Site de documentation CPGEOM
 
 
 theme: 
-  name: readthedocs
+  name: material
 
 
 plugins:
