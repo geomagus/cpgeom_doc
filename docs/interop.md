@@ -7,7 +7,7 @@
 - Directives et recommandations : **INSPIRE** , ...
 - Partenariats et collaborations public/privé
 
-<html><img src="/assets/image-1.png" alt="ogc" width="250"/></html>
+<html><img src="../assets/image-1.png" alt="ogc" width="250"/></html>
 
 ## 📜 Normes
 
@@ -45,7 +45,7 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - WKT CRS 
 
 <html>
-<img id="crsImg" src="/assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
+<img id="crsImg" src="../assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
 </html>
 
 ## Catalogue / Métadonnées
