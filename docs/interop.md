@@ -7,7 +7,7 @@
 - Directives et recommandations : **INSPIRE** , ...
 - Partenariats et collaborations public/privé
 
-![OGC](../assets/image-1.png)
+<html><img src="../assets/image-1.png" alt="crs" width="300"/></html>
 
 ## 📜 Normes
 
