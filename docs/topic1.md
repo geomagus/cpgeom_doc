@@ -35,91 +35,52 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 
 ### 🗺️ Données de référence de l'IGN
 
-- **BD TOPO®**
 <html>
 <head>
   <meta charset="utf-8">
-  <title>BD TOPO</title>
-
+  <title>BD TOPO & BD ORTHO</title>
   <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    #map {
+    #map, #map2 {
       width: 100%;
-      height: 500px;
+      height: 400px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
+<h2>BD TOPO®</h2>
 <div id="map"></div>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script>
-  // Création de la carte centrée sur Paris
-  var map = L.map("map").setView([48.8566, 2.3522], 12);
-
-  // Couche Plan IGN (WMTS ouvert)
-   L.tileLayer(
-     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
-       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
-       "&STYLE=normal&FORMAT=image/png" +
-       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
-     {
-       maxZoom: 18,
-       attribution: "© IGN - Géoportail",
-       tileSize: 256,
-     }
-   ).addTo(map);
-
-
-</script>
-
-</body>
-</html>
-<br>
-
-- **BD ORTHO®** 
-
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>BD ORTHO</title>
-
-  <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
-  <style>
-    #map {
-      width: 100%;
-      height: 500px;
-    }
-  </style>
-</head>
-<body>
-
+<h2>BD ORTHO®</h2>
 <div id="map2"></div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script>
-  // Création de la carte centrée sur Paris
-  var map2 = L.map("map2").setView([48.8566, 2.3522], 12);
-
-
+  // Carte BD TOPO
+  var map = L.map("map").setView([48.8566, 2.3522], 12);
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
-      "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
-      "&STYLE=normal&FORMAT=image/jpeg" +
-      "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+    "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+    "&STYLE=normal&FORMAT=image/png" +
+    "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}", 
+    {
+      maxZoom: 18,
+      attribution: "© IGN - Géoportail",
+      tileSize: 256,
+    }
+  ).addTo(map);
+
+  // Carte BD ORTHO
+  var map2 = L.map("map2").setView([48.8566, 2.3522], 12);
+  L.tileLayer(
+    "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+    "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
+    "&STYLE=normal&FORMAT=image/jpeg" +
+    "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}", 
     {
       maxZoom: 18,
       attribution: "© IGN - Géoportail",
@@ -128,7 +89,6 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
   ).addTo(map2);
 
 </script>
-
 </body>
 </html>
  
