@@ -4,7 +4,7 @@
 
 ### 🔭 Imagerie optique
 
-<div style="display: flex; gap: 20px; justify-content: flex-start; flex-wrap: nowrap;">
+<div style="display: flex; gap: 20px; justify-content: flex-start; flex-wrap: wrap;">
 
   <img src="../assets/spot.jpg" alt="Image 1"
        style="flex: 1 1 0; max-width: 300px; height: auto;
@@ -23,14 +23,14 @@
               border-radius: 20px;
               box-shadow: 0 8px 20px rgba(0,0,0,0.15);
               transition: transform 0.3s ease;">
-
 </div>
+<br>
 
 | Constellation | Résolution | Fauchée | Capacité d'acqusition journalière
 |----------|-------------|-------------|-----------------|
 | **SPOT** | 1,5 m | 60 km | 3.000.000 km2 |
 | **Pléiades** | 70 cm | 20 km | 700.000 km2 |
-| **Pléiades** Neo | 30 cm | 14 km | 1.000.000 km2 |
+| **Pléiades Neo** | 30 cm | 14 km | 1.000.000 km2 |
 
 
 ### 📡 Imagerie radar (SAR)
