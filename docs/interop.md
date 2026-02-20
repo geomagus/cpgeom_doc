@@ -45,7 +45,7 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - WKT CRS 
 
 <html>
-<img id="crsImg" src="../assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
+<img id="crsImg" src="../assets/crs.png" alt="crs" width="100"/>
 </html>
 
 ## Catalogue / Métadonnées

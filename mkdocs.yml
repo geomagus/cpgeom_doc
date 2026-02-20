@@ -8,22 +8,20 @@ theme:
   logo: assets/bg.png  
 
   palette:
-
-    # Mode clair
-    - scheme: default
-      primary: teal
-      accent: amber
+    - scheme: default   # Mode clair
+      primary: deep-purple-200   # violet pastel
+      accent: pink-200           # rose pastel
       toggle:
         icon: material/weather-night
         name: Passer en mode sombre
 
-    # Mode sombre
-    - scheme: slate
-      primary: teal
-      accent: amber
+    - scheme: slate     # Mode sombre
+      primary: deep-purple-700   # violet plus sombre pour contraste
+      accent: pink-400           # rose un peu plus vif pour ressortir
       toggle:
         icon: material/weather-sunny
         name: Passer en mode clair
+
 
   features:
     - navigation.tabs
@@ -61,6 +59,3 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-
-extra_javascript:
-  - javascripts/random-crs.js
