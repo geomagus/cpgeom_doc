@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Sujet 2 - Site de documentation CPGEOM</title>
+    <title>La Géoplateforme de l'IGN - Site de documentation CPGEOM</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Sujet 2";
+        var mkdocs_page_name = "La G\u00e9oplateforme de l\u0027IGN";
         var mkdocs_page_input_path = "topic2.md";
         var mkdocs_page_url = null;
       </script>
@@ -44,11 +44,11 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../topic1/">La Géoplateforme de l'IGN</a>
+                <li class="toctree-l1"><a class="reference internal" href="../topic1/">📍 Sources de données</a>
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Sujet 2</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">La Géoplateforme de l'IGN</a>
     <ul class="current">
     </ul>
                 </li>
@@ -67,7 +67,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Sujet 2</li>
+      <li class="breadcrumb-item active">La Géoplateforme de l'IGN</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -76,12 +76,130 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="sujet-2">Sujet 2</h1>
+                <h1 id="la-geoplateforme-de-lign">La Géoplateforme de l'IGN</h1>
+<p><img alt="Logo géoplateforme" src="../assets/logo_geoplateforme.jpg" title="logo géoplateforme" /></p>
+<h1 id="geoportail-geoplateforme-de-lign">🌍 Géoportail / Géoplateforme de l’IGN</h1>
+<p>Bienvenue sur la page de documentation simplifiée de la <strong>Géoplateforme de l’IGN</strong>.<br />
+Cette page présente les objectifs, les fonctionnalités principales et des exemples d’utilisation.</p>
+<hr />
+<h2 id="1-quest-ce-que-la-geoplateforme">📌 1. Qu’est-ce que la Géoplateforme ?</h2>
+<p>La <strong>Géoplateforme</strong> est l’infrastructure nationale de diffusion des données géographiques en France.<br />
+Elle est développée et maintenue par l’IGN (Institut national de l'information géographique et forestière).</p>
+<p>Elle permet :</p>
+<ul>
+<li>📡 L’accès à des données géographiques officielles</li>
+<li>🗺️ La visualisation de cartes interactives</li>
+<li>🔌 L’intégration de services cartographiques via API</li>
+<li>📂 Le téléchargement de jeux de données</li>
+</ul>
+<hr />
+<h2 id="2-types-de-donnees-disponibles">🗺️ 2. Types de données disponibles</h2>
+<p>La plateforme propose différents types de données :</p>
+<h3 id="orthophotos">🛰️ Orthophotos</h3>
+<p>Images aériennes haute résolution.</p>
+<p><img alt="Exemple d'orthophoto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Orthophoto_example.jpg/640px-Orthophoto_example.jpg" /></p>
+<hr />
+<h3 id="cartes-topographiques">🗺️ Cartes topographiques</h3>
+<p>Cartes détaillées avec relief, routes, bâtiments, etc.</p>
+<p><img alt="Carte topographique" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Topographic_map_example.png/640px-Topographic_map_example.png" /></p>
+<hr />
+<h3 id="donnees-altimetriques-mnt">🌊 Données altimétriques (MNT)</h3>
+<p>Modèles numériques de terrain (MNT) pour représenter le relief.</p>
+<p><img alt="Modèle numérique de terrain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Digital_Elevation_Model_example.png/640px-Digital_Elevation_Model_example.png" /></p>
+<hr />
+<h2 id="3-services-web-disponibles">🔌 3. Services Web disponibles</h2>
+<p>La Géoplateforme fournit plusieurs services standards OGC :</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WMS</td>
+<td>Service de visualisation d’images cartographiques</td>
+</tr>
+<tr>
+<td>WMTS</td>
+<td>Service tuilé pour affichage rapide</td>
+</tr>
+<tr>
+<td>WFS</td>
+<td>Service d’accès aux données vectorielles</td>
+</tr>
+<tr>
+<td>API REST</td>
+<td>Accès programmatique aux données</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-exemple-dutilisation-leaflet-wmts">💻 4. Exemple d’utilisation (Leaflet + WMTS)</h2>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Carte ortho IGN</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Ortho IGN</h2>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // Création de la carte centrée sur Paris
+  var map = L.map("map").setView([48.8566, 2.3522], 12);
+
+  // Couche Plan IGN (WMTS ouvert)
+//   L.tileLayer(
+//     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+//       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+//       "&STYLE=normal&FORMAT=image/png" +
+//       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+//     {
+//       maxZoom: 18,
+//       attribution: "© IGN - Géoportail",
+//       tileSize: 256,
+//     }
+//   ).addTo(map);
+
+  L.tileLayer(
+    "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+      "&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS" +
+      "&STYLE=normal&FORMAT=image/jpeg" +
+      "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+    {
+      maxZoom: 18,
+      attribution: "© IGN - Géoportail",
+      tileSize: 256,
+    }
+  ).addTo(map);
+
+</script>
+
+</body>
+</html>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../topic1/" class="btn btn-neutral float-left" title="La Géoplateforme de l'IGN"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../topic1/" class="btn btn-neutral float-left" title="📍 Sources de données"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>

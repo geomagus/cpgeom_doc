@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>La Géoplateforme de l'IGN - Site de documentation CPGEOM</title>
+    <title>📍 Sources de données - Site de documentation CPGEOM</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "La G\u00e9oplateforme de l\u0027IGN";
+        var mkdocs_page_name = "\ud83d\udccd Sources de donn\u00e9es";
         var mkdocs_page_input_path = "topic1.md";
         var mkdocs_page_url = null;
       </script>
@@ -44,13 +44,29 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">La Géoplateforme de l'IGN</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">📍 Sources de données</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-donnees-satellitaires">1. Données satellitaires</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#imagerie-optique">🔭 Imagerie optique</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#imagerie-radar-sar">📡 Imagerie radar (SAR)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-metadonnees-et-catalogues">2. Métadonnées et catalogues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-donnees-publiques-open-data">3. Données publiques &amp; Open Data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#donnees-de-reference-de-lign">🗺️ Données de référence de l'IGN</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../topic2/">Sujet 2</a>
+                <li class="toctree-l1"><a class="reference internal" href="../topic2/">La Géoplateforme de l'IGN</a>
                 </li>
               </ul>
       </div>
@@ -67,7 +83,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">La Géoplateforme de l'IGN</li>
+      <li class="breadcrumb-item active">📍 Sources de données</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -76,71 +92,83 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="la-geoplateforme-de-lign">La Géoplateforme de l'IGN</h1>
-<p><img alt="Logo géoplateforme" src="../assets/logo_geoplateforme.jpg" title="logo géoplateforme" /></p>
-<h1 id="geoportail-geoplateforme-de-lign">🌍 Géoportail / Géoplateforme de l’IGN</h1>
-<p>Bienvenue sur la page de documentation simplifiée de la <strong>Géoplateforme de l’IGN</strong>.<br />
-Cette page présente les objectifs, les fonctionnalités principales et des exemples d’utilisation.</p>
-<hr />
-<h2 id="1-quest-ce-que-la-geoplateforme">📌 1. Qu’est-ce que la Géoplateforme ?</h2>
-<p>La <strong>Géoplateforme</strong> est l’infrastructure nationale de diffusion des données géographiques en France.<br />
-Elle est développée et maintenue par l’IGN (Institut national de l'information géographique et forestière).</p>
-<p>Elle permet :</p>
-<ul>
-<li>📡 L’accès à des données géographiques officielles</li>
-<li>🗺️ La visualisation de cartes interactives</li>
-<li>🔌 L’intégration de services cartographiques via API</li>
-<li>📂 Le téléchargement de jeux de données</li>
-</ul>
-<hr />
-<h2 id="2-types-de-donnees-disponibles">🗺️ 2. Types de données disponibles</h2>
-<p>La plateforme propose différents types de données :</p>
-<h3 id="orthophotos">🛰️ Orthophotos</h3>
-<p>Images aériennes haute résolution.</p>
-<p><img alt="Exemple d'orthophoto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Orthophoto_example.jpg/640px-Orthophoto_example.jpg" /></p>
-<hr />
-<h3 id="cartes-topographiques">🗺️ Cartes topographiques</h3>
-<p>Cartes détaillées avec relief, routes, bâtiments, etc.</p>
-<p><img alt="Carte topographique" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Topographic_map_example.png/640px-Topographic_map_example.png" /></p>
-<hr />
-<h3 id="donnees-altimetriques-mnt">🌊 Données altimétriques (MNT)</h3>
-<p>Modèles numériques de terrain (MNT) pour représenter le relief.</p>
-<p><img alt="Modèle numérique de terrain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Digital_Elevation_Model_example.png/640px-Digital_Elevation_Model_example.png" /></p>
-<hr />
-<h2 id="3-services-web-disponibles">🔌 3. Services Web disponibles</h2>
-<p>La Géoplateforme fournit plusieurs services standards OGC :</p>
+                <h1 id="sources-de-donnees">📍 Sources de données</h1>
+<h2 id="1-donnees-satellitaires">1. Données satellitaires</h2>
+<h3 id="imagerie-optique">🔭 Imagerie optique</h3>
+<div style="display: flex; gap: 20px; justify-content: flex-start; flex-wrap: nowrap;">
+
+  <img src="assets/spot.jpg" alt="Image 1"
+       style="flex: 1 1 0; max-width: 300px; height: auto;
+              border-radius: 20px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+              transition: transform 0.3s ease;">
+
+  <img src="assets/pleiades.jpg" alt="Image 2"
+       style="flex: 1 1 0; max-width: 300px; height: auto;
+              border-radius: 20px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+              transition: transform 0.3s ease;">
+
+  <img src="assets/neo.jpg" alt="Image 3"
+       style="flex: 1 1 0; max-width: 300px; height: auto;
+              border-radius: 20px;
+              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+              transition: transform 0.3s ease;">
+
+</div>
+
 <table>
 <thead>
 <tr>
-<th>Service</th>
-<th>Description</th>
+<th>Constellation</th>
+<th>Résolution</th>
+<th>Fauchée</th>
+<th>Capacité d'acqusition journalière</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WMS</td>
-<td>Service de visualisation d’images cartographiques</td>
+<td><strong>SPOT</strong></td>
+<td>1,5 m</td>
+<td>60 km</td>
+<td>3.000.000 km2</td>
 </tr>
 <tr>
-<td>WMTS</td>
-<td>Service tuilé pour affichage rapide</td>
+<td><strong>Pléiades</strong></td>
+<td>70 cm</td>
+<td>20 km</td>
+<td>700.000 km2</td>
 </tr>
 <tr>
-<td>WFS</td>
-<td>Service d’accès aux données vectorielles</td>
-</tr>
-<tr>
-<td>API REST</td>
-<td>Accès programmatique aux données</td>
+<td><strong>Pléiades</strong> Neo</td>
+<td>30 cm</td>
+<td>14 km</td>
+<td>1.000.000 km2</td>
 </tr>
 </tbody>
 </table>
+<h3 id="imagerie-radar-sar">📡 Imagerie radar (SAR)</h3>
+<p>L'imagerie radar est principalement utilisée pour la détection de mouvements de terrain ou pour permettre l'observation de la Terre quelque soit la météo. </p>
 <hr />
-<h2 id="4-exemple-dutilisation-leaflet-wmts">💻 4. Exemple d’utilisation (Leaflet + WMTS)</h2>
+<h2 id="2-metadonnees-et-catalogues">2. Métadonnées et catalogues</h2>
+<p>Les méta-données jouent un rôle central dans les missions du service géomatique. Elles sont la colonne vertébrale des solutions suivantes, développées en interne :</p>
+<ul>
+<li><strong>Catalogues de métadonnées</strong> (ex. ISO 19115)  </li>
+<li><strong>Services OGC</strong> (WMS, WFS, CSW)  </li>
+<li><strong>API de services géospatiaux</strong></li>
+</ul>
+<p>Ces outils facilitent la <strong>recherche, l’interopérabilité et la diffusion</strong> des données satellitaires.</p>
+<hr />
+<h2 id="3-donnees-publiques-open-data">3. Données publiques &amp; Open Data</h2>
+<p>Le service géomatique s’appuie régulièrement sur des sources <strong>libres ou institutionnelles</strong>, telles que les données OpenStreetMap (OSM) et les données de référence suivantes :</p>
+<h3 id="donnees-de-reference-de-lign">🗺️ Données de référence de l'IGN</h3>
+<ul>
+<li><strong>BD TOPO®</strong></li>
+</ul>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Carte ortho IGN</title>
+  <title>BD TOPO</title>
 
   <!-- Leaflet CSS -->
   <link
@@ -156,7 +184,6 @@ Elle est développée et maintenue par l’IGN (Institut national de l'informati
 </head>
 <body>
 
-<h2>Ortho IGN</h2>
 <div id="map"></div>
 
 <!-- Leaflet JS -->
@@ -167,17 +194,54 @@ Elle est développée et maintenue par l’IGN (Institut national de l'informati
   var map = L.map("map").setView([48.8566, 2.3522], 12);
 
   // Couche Plan IGN (WMTS ouvert)
-//   L.tileLayer(
-//     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
-//       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
-//       "&STYLE=normal&FORMAT=image/png" +
-//       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
-//     {
-//       maxZoom: 18,
-//       attribution: "© IGN - Géoportail",
-//       tileSize: 256,
-//     }
-//   ).addTo(map);
+   L.tileLayer(
+     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
+       "&TILEMATRIXSET=PM&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2" +
+       "&STYLE=normal&FORMAT=image/png" +
+       "&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}",
+     {
+       maxZoom: 18,
+       attribution: "© IGN - Géoportail",
+       tileSize: 256,
+     }
+   ).addTo(map);
+
+
+</script>
+
+</body>
+</html>
+
+<ul>
+<li><strong>BD ORTHO®</strong> </li>
+</ul>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BD ORTHO</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+  // Création de la carte centrée sur Paris
+  var map = L.map("map").setView([48.8566, 2.3522], 12);
 
   L.tileLayer(
     "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0" +
@@ -195,12 +259,14 @@ Elle est développée et maintenue par l’IGN (Institut national de l'informati
 
 </body>
 </html>
+
+<hr />
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href=".." class="btn btn-neutral float-left" title="Site de documentation CPGEOM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../topic2/" class="btn btn-neutral float-right" title="Sujet 2">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../topic2/" class="btn btn-neutral float-right" title="La Géoplateforme de l'IGN">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
