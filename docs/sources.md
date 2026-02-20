@@ -51,10 +51,10 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 </head>
 <body>
 
-<h2>BD TOPO®</h2>
+<h3>BD TOPO®</h3>
 <div id="map"></div>
 
-<h2>BD ORTHO®</h2>
+<h3>BD ORTHO®</h3>
 <div id="map2"></div>
 
 <!-- Leaflet JS -->

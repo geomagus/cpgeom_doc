@@ -2,5 +2,44 @@
 
 **Définition** : système capable de fonctionner avec d'autres systèmes ou produits existants ou futurs, sans restriction d'accès ou de mise en oeuvre.
 
-## Format d'échange normalisé
-- **GML** (Geography Markup Language)
+- Format d'échange normalisé : **GML** (Geography Markup Language)
+- Standards et spécifications : **OGC** (Open Geospatial Consortium) -- notamment des standards sur les API (OGC API)
+- Directives et recommandations : **INSPIRE** , ...
+- Partenariats et collaborations public/privé
+
+![OGC](../assets/image-1.png)
+
+## 📜 Normes
+
+- **ISO 19115** (Métadonnées)
+- **ISO 19139** (Métadonnées)
+- **ISO 19157** (Qualité des données)
+
+## ⚙️ Géo standards (OGC)
+
+### FAIR
+- Findable
+- Accessible
+- Interopérable
+- Reusable
+
+### Web Services (WMS, WFS, WMTS, WCS, WFS-T...)
+
+Données mises à disposition par un **serveur cartographique** (Geoserver, Mapserver...) et directement lues sur navigateur web grâce à un **client cartographique** (OpenLayers, Leaflet...) ou sur un logiciel SIG desktop.
+
+- WMS
+- WMTS
+- WFS : Web Feature Service
+- WCS : Web Coverage Service
+- CS-W : Catalog Service Web
+- WPS : Web Processing Service
+
+### Formats (en local)
+
+- SLD (style associé à un Web Sevice)
+- GML (Geography Markup Language)
+- KML
+- GPKG
+- WKT CRS
+
+![alt text](image-2.png){width=150px}
