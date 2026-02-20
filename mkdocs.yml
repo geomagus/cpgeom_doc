@@ -1,10 +1,71 @@
-site_name : Site de documentation CPGEOM
+site_name: "Documentation CPGEOM"
+site_description: "Ressources et documentation pour la CPGEOM"
+site_author: "CPGEOM"
 
-
-theme: 
+theme:
   name: material
+  language: fr
+  logo: assets/logo.png   # optionnel
+  favicon: assets/favicon.png  # optionnel
 
+  palette:
+
+    # Mode clair
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode sombre
+
+    # Mode sombre
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode clair
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.instant
+    - navigation.expand
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+    - search.highlight
+    - search.suggest
 
 plugins:
   - search
   - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - attr_list
+  - def_list
+  - tables
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TON_REPO
+    - icon: fontawesome/solid/envelope
+      link: mailto:contact@cpgeom.fr
+
+extra_css:
+  - stylesheets/extra.css
