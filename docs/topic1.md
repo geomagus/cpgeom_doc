@@ -4,25 +4,28 @@
 
 ### 🔭 Imagerie optique
 
-<div style="display: flex; gap: 20px; justify-content: flex-start; flex-wrap: wrap;">
+<div style="
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Ne jamais passer à la ligne */
+  overflow-x: auto; /* Permet de scroller si écran trop petit */
+  margin-bottom: 20px;
+">
+  <img src="../assets/spot.jpg" alt="SPOT"
+       style="flex: 1; min-width: 200px; max-width: 33%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.transform='scale(1)'">
 
-  <img src="../assets/spot.jpg" alt="Image 1"
-       style="flex: 1 1 0; max-width: 300px; height: auto;
-              border-radius: 20px;
-              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-              transition: transform 0.3s ease;">
+  <img src="../assets/pleiades.jpg" alt="Pléiades"
+       style="flex: 1; min-width: 200px; max-width: 33%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.transform='scale(1)'">
 
-  <img src="../assets/pleiades.jpg" alt="Image 2"
-       style="flex: 1 1 0; max-width: 300px; height: auto;
-              border-radius: 20px;
-              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-              transition: transform 0.3s ease;">
-
-  <img src="../assets/neo.jpg" alt="Image 3"
-       style="flex: 1 1 0; max-width: 300px; height: auto;
-              border-radius: 20px;
-              box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-              transition: transform 0.3s ease;">
+  <img src="../assets/neo.jpg" alt="Pléiades Neo"
+       style="flex: 1; min-width: 200px; max-width: 33%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; cursor: pointer;"
+       onmouseover="this.style.transform='scale(1.05)'" 
+       onmouseout="this.style.transform='scale(1)'">
 </div>
 <br>
 
@@ -124,14 +127,14 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
 </head>
 <body>
 
-<div id="map"></div>
+<div id="map2"></div>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
   // Création de la carte centrée sur Paris
-  var map = L.map("map").setView([48.8566, 2.3522], 12);
+  var map2 = L.map("map").setView([48.8566, 2.3522], 12);
 
 
   L.tileLayer(
@@ -144,7 +147,7 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
       attribution: "© IGN - Géoportail",
       tileSize: 256,
     }
-  ).addTo(map);
+  ).addTo(map2);
 
 </script>
 
