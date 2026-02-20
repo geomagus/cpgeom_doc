@@ -49,11 +49,6 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
       font-family: sans-serif;
     }
 
-    h3 {
-      text-align: center;
-      margin: 10px 0;
-    }
-
     /* Container pour les 2 cartes côte à côte */
     .map-container {
       display: flex;
@@ -62,18 +57,37 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
       padding: 0 10px;
     }
 
+    /* Chaque carte avec son titre */
+    .map-box {
+      flex: 1;                    /* largeur égale */
+      display: flex;
+      flex-direction: column;     /* titre au-dessus de la carte */
+    }
+
+    .map-box h4 {
+      text-align: center;
+      margin: 5px 0;
+    }
+
     #map, #map2 {
-      flex: 1;         /* largeur égale */
-      height: 100%;
+      flex: 1;         /* la carte prend tout l'espace restant dans .map-box */
     }
   </style>
 </head>
 <body>
 
-
 <div class="map-container">
-  <div id="map"><h4>BD TOPO</h4></div>
-  <div id="map2"><h4>BD ORTHO</h4></div>
+  <!-- Carte BD TOPO -->
+  <div class="map-box">
+    <h4>BD TOPO</h4>
+    <div id="map"></div>
+  </div>
+
+  <!-- Carte BD ORTHO -->
+  <div class="map-box">
+    <h4>BD ORTHO</h4>
+    <div id="map2"></div>
+  </div>
 </div>
 
 <!-- Leaflet JS -->
@@ -114,6 +128,6 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
   map.sync(map2);
   map2.sync(map);
 </script>
-<br>
+
 </body>
 </html>
