@@ -6,7 +6,7 @@
 
 <div style=" display: flex; gap: 20px; justify-content: space-between; flex-wrap: nowrap; /* Ne jamais passer à la ligne */ overflow-x: auto; /* Permet de scroller si écran trop petit */ margin-bottom: 20px; "> <img src="../assets/spot.jpg" alt="SPOT" style="flex: 1; min-width: 200px; max-width: 33%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"> <img src="../assets/pleiades.jpg" alt="Pléiades" style="flex: 1; min-width: 200px; max-width: 33%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"> <img src="../assets/neo.jpg" alt="Pléiades Neo" style="flex: 1; min-width: 200px; max-width: 33%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"> </div> <br>
 
-| Constellation | Résolution | Fauchée | Capacité d'acqusition journalière
+| Constellation | Résolution | Fauchée | Capacité d'acquisition journalière
 |----------|-------------|-------------|-----------------|
 | **SPOT** | 1,5 m | 60 km | 3.000.000 km2 |
 | **Pléiades** | 70 cm | 20 km | 700.000 km2 |
@@ -128,6 +128,6 @@ Le service géomatique s’appuie régulièrement sur des sources **libres ou in
   map.sync(map2);
   map2.sync(map);
 </script>
-
+<br>
 </body>
 </html>

@@ -7,7 +7,7 @@
 - Directives et recommandations : **INSPIRE** , ...
 - Partenariats et collaborations public/privé
 
-<html><img src="../assets/image-1.png" alt="crs" width="300"/></html>
+<html><img src="../assets/image-1.png" alt="crs" width="100"/></html>
 
 ## 📜 Normes
 
@@ -34,6 +34,8 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - CS-W : Catalog Service Web
 - WPS : Web Processing Service
 
+***GetCapabilities*** : retourne les métadonnées du service (couches proposées, projections associées, auteur…)
+
 ### Formats (en local)
 
 - SLD (style associé à un Web Sevice)
@@ -42,7 +44,77 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 - GPKG
 - WKT CRS 
 
-<html><img src="../assets/crs.png" alt="crs" width="100"/></html>
+<html>
+<style>
+  .random-img {
+    position: absolute;
+    width: 100px;
+    cursor: grab;
+  }
 
-### WMS vs WMTS 
+  .dragging {
+    cursor: grabbing;
+  }
+</style>
 
+<img id="crsImg" src="../assets/crs.png" alt="crs" width="100" style="cursor:pointer;" />
+
+<script>
+  const original = document.getElementById("crsImg");
+
+  original.addEventListener("click", function() {
+    const newImg = document.createElement("img");
+    newImg.src = "../assets/crs.png";
+    newImg.classList.add("random-img");
+
+    const maxWidth = window.innerWidth - 100;
+    const maxHeight = window.innerHeight - 100;
+
+    newImg.style.left = Math.random() * maxWidth + "px";
+    newImg.style.top = Math.random() * maxHeight + "px";
+
+    makeDraggable(newImg);
+
+    document.body.appendChild(newImg);
+  });
+
+  function makeDraggable(element) {
+
+    function onMouseMove(e) {
+      element.style.left = (e.clientX - offsetX) + "px";
+      element.style.top = (e.clientY - offsetY) + "px";
+    }
+
+    function onMouseUp() {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+      element.classList.remove("dragging");
+    }
+
+    let offsetX, offsetY;
+
+    element.addEventListener("mousedown", function(e) {
+      offsetX = e.clientX - element.offsetLeft;
+      offsetY = e.clientY - element.offsetTop;
+
+      element.classList.add("dragging");
+
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    });
+  }
+</script>
+</html>
+
+## Catalogue / Métadonnées
+- Données de **qualité** (exhaustives, propres, géométriquement correctes)
+- Données **documentées** (normes 19115, 19139, INSPIRE)
+- Données **diffusables** (catalogue)
+- Données **réutilisables** (accessibles, ouvertes)
+
+## Spatial ETL : Extract Transform Load
+- Reprojection
+- Transformations spatiales
+- Transformations topologiques
+- Re-symbolisation
+- Géocodage
