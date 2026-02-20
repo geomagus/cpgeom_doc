@@ -1,1 +1,0 @@
-# La Géoplateforme de l'IGN
