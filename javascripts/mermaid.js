@@ -1,12 +1,13 @@
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-import elkLayouts from 'https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0/dist/mermaid-layout-elk.esm.min.mjs';
+window.mermaidConfig = {
+  startOnLoad: true,
+  theme: "base", // default | dark | forest | neutral | base
+  themeVariables: {
+    primaryColor: "#BBDEFB",
+    primaryTextColor: "#000000",
+    primaryBorderColor: "#1E88E5",
+    lineColor: "#424242",
+    fontSize: "16px"
+  }
+};
 
-mermaid.registerLayoutLoaders(elkLayouts);
-mermaid.initialize({
-  startOnLoad: false,
-  securityLevel: "loose",
-  layout: "elk",
-});
-
-// Important: necessary to make it visible to Material for MkDocs
-window.mermaid = mermaid;
+mermaid.initialize(window.mermaidConfig);
