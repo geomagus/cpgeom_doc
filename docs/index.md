@@ -1,1 +1,1 @@
-# Site de documentation CPGEOM
+![alt text](../assets/neo.png)

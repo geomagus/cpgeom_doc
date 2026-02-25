@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Ressources et documentation pour la CPGEOM">
+        <meta name="description" content="Documentation géomatique">
       
       
-        <meta name="author" content="CPGEOM">
+        <meta name="author" content="geomagus">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>Métadonnées - Documentation CPGEOM</title>
+        <title>🏷️ Métadonnées - La Géo-Matrix</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href=".." title="Documentation CPGEOM" class="md-header__button md-logo" aria-label="Documentation CPGEOM" data-md-component="logo">
+    <a href=".." title="La Géo-Matrix" class="md-header__button md-logo" aria-label="La Géo-Matrix" data-md-component="logo">
       
   <img src="../assets/bg.png" alt="logo">
 
@@ -109,13 +109,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Documentation CPGEOM
+            La Géo-Matrix
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Métadonnées
+              🏷️ Métadonnées
             
           </span>
         </div>
@@ -216,7 +216,7 @@
   
     
   
-  Site de documentation CPGEOM
+  Home
 
       </a>
     </li>
@@ -256,7 +256,7 @@
   
     
   
-  Métadonnées
+  🏷️ Métadonnées
 
       </a>
     </li>
@@ -294,7 +294,7 @@
   
     
   
-  VRT
+  ⚙️ VRT
 
       </a>
     </li>
@@ -331,12 +331,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Documentation CPGEOM" class="md-nav__button md-logo" aria-label="Documentation CPGEOM" data-md-component="logo">
+    <a href=".." title="La Géo-Matrix" class="md-nav__button md-logo" aria-label="La Géo-Matrix" data-md-component="logo">
       
   <img src="../assets/bg.png" alt="logo">
 
     </a>
-    Documentation CPGEOM
+    La Géo-Matrix
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -355,7 +355,7 @@
   <span class="md-ellipsis">
     
   
-    Site de documentation CPGEOM
+    Home
   
 
     
@@ -411,6 +411,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏷️ Métadonnées
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -418,7 +436,7 @@
   <span class="md-ellipsis">
     
   
-    Métadonnées
+    🏷️ Métadonnées
   
 
     
@@ -427,6 +445,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simplifier-le-partage-des-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simplifier le partage des données
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -473,7 +521,7 @@
   <span class="md-ellipsis">
     
   
-    VRT
+    ⚙️ VRT
   
 
     
@@ -503,19 +551,35 @@
 
 
 
-<h1 id="metadonnees">Métadonnées<a class="headerlink" href="#metadonnees" title="Permanent link">&para;</a></h1>
+<h1 id="metadonnees">🏷️ Métadonnées<a class="headerlink" href="#metadonnees" title="Permanent link">&para;</a></h1>
 <p>Une métadonnée est une donnée relative à une autre donnée. Elle permet de donner davantage de contexte aux données ou fournir des directives précises sur leur traitement.</p>
-<pre class="mermaid"><code>mindmap
-  root((Métadonnées))
-    Origine des données et identité du créateur
-    Conditions et objectifs de la collecte
-    Réference de temps et de localisation
-    Conditions d'accès et modalités d'utilisation</code></pre>
-<p><strong>Intérêts</strong> :
-- Simplifier la recherche de la données
-- Permettre l'ouverture des données
-- Améliorer l'intéropérabilité
-- Renforcer la gestion et l'archivage des données</p>
+<pre class="mermaid"><code>graph TD
+
+    M((Métadonnées))
+
+    A[Référence de temps et de localisation]
+    B[Conditions d'accès et modalités d'utilisation]
+    C[Conditions et objectifs de la collecte]
+    D[Origine des données et identité du créateur]
+
+    M --- A
+    M --- B
+    M --- C
+    M --- D</code></pre>
+<p><strong>Intérêts</strong> :</p>
+<ul>
+<li>Simplifier la recherche de la données</li>
+<li>Permettre l'ouverture des données</li>
+<li>Améliorer l'intéropérabilité</li>
+<li>Renforcer la gestion et l'archivage des données</li>
+</ul>
+<h2 id="simplifier-le-partage-des-donnees">Simplifier le partage des données<a class="headerlink" href="#simplifier-le-partage-des-donnees" title="Permanent link">&para;</a></h2>
+<ul>
+<li>catalogue avec moteur de recherche</li>
+<li>normaliser le contenu (<strong>ISO 19115</strong>)</li>
+<li>normaliser la forme (<strong>ISO 19139</strong>)</li>
+<li>normaliser la diffusion (<strong>CSW</strong> : Catalog Service for the Web)</li>
+</ul>
 
 
 
@@ -575,10 +639,6 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../javascripts/mermaid.mjs" type="module"></script>
       
     
   </body>

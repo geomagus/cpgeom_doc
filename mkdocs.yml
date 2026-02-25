@@ -1,6 +1,6 @@
-site_name: "Documentation CPGEOM"
-site_description: "Ressources et documentation pour la CPGEOM"
-site_author: "CPGEOM"
+site_name: "La Géo-Matrix"
+site_description: "Documentation géomatique"
+site_author: "geomagus"
 
 theme:
   name: material
@@ -64,7 +64,3 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-
-extra_javascript:
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
-  - javascripts/mermaid.mjs
