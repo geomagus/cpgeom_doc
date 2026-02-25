@@ -1,13 +1,12 @@
-window.mermaidConfig = {
+mermaid.initialize({
   startOnLoad: true,
-  theme: "base", // default | dark | forest | neutral | base
+  theme: "base",
   themeVariables: {
-    primaryColor: "#BBDEFB",
-    primaryTextColor: "#000000",
-    primaryBorderColor: "#1E88E5",
-    lineColor: "#424242",
-    fontSize: "16px"
+    fontFamily: "Inter, Roboto, sans-serif",
+    fontSize: "15px",
+    lineColor: "#BDBDBD",
+    primaryBorderColor: "#00000000", // enlève bordures moches
+    clusterBkg: "#ffffff",
+    nodeBorder: "0px"
   }
-};
-
-mermaid.initialize(window.mermaidConfig);
+});
