@@ -13,24 +13,28 @@
       
       
       
+        <link rel="prev" href="../metadata/">
+      
+      
+        <link rel="next" href="../sources/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Géo-Matrix</title>
+        <title>OGR/GDAL - Géo-Matrix</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ogrgdal" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,9 +96,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/." title="Géo-Matrix" class="md-header__button md-logo" aria-label="Géo-Matrix" data-md-component="logo">
+    <a href=".." title="Géo-Matrix" class="md-header__button md-logo" aria-label="Géo-Matrix" data-md-component="logo">
       
-  <img src="/assets/matrice.png" alt="logo">
+  <img src="../assets/matrice.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              OGR/GDAL
             
           </span>
         </div>
@@ -201,7 +210,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -220,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/interop/" class="md-tabs__link">
+      <a href="../interop/" class="md-tabs__link">
         
   
   
@@ -239,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/metadata/" class="md-tabs__link">
+      <a href="../metadata/" class="md-tabs__link">
         
   
   
@@ -256,9 +265,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="/ogr/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -277,7 +288,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sources/" class="md-tabs__link">
+      <a href="../sources/" class="md-tabs__link">
         
   
   
@@ -296,7 +307,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/vrt/" class="md-tabs__link">
+      <a href="../vrt/" class="md-tabs__link">
         
   
   
@@ -339,9 +350,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Géo-Matrix" class="md-nav__button md-logo" aria-label="Géo-Matrix" data-md-component="logo">
+    <a href=".." title="Géo-Matrix" class="md-nav__button md-logo" aria-label="Géo-Matrix" data-md-component="logo">
       
-  <img src="/assets/matrice.png" alt="logo">
+  <img src="../assets/matrice.png" alt="logo">
 
     </a>
     Géo-Matrix
@@ -356,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -383,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interop/" class="md-nav__link">
+      <a href="../interop/" class="md-nav__link">
         
   
   
@@ -410,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/metadata/" class="md-nav__link">
+      <a href="../metadata/" class="md-nav__link">
         
   
   
@@ -434,10 +445,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/ogr/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OGR/GDAL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -453,6 +491,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connexion-a-la-bd-postgresql-en-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connexion à la BD PostgreSQL en CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -464,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sources/" class="md-nav__link">
+      <a href="../sources/" class="md-nav__link">
         
   
   
@@ -491,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/vrt/" class="md-nav__link">
+      <a href="../vrt/" class="md-nav__link">
         
   
   
@@ -524,8 +593,36 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="ogrgdal">OGR/GDAL<a class="headerlink" href="#ogrgdal" title="Permanent link">&para;</a></h1>
+<h2 id="connexion-a-la-bd-postgresql-en-cli">Connexion à la BD PostgreSQL en CLI<a class="headerlink" href="#connexion-a-la-bd-postgresql-en-cli" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>psql<span class="w"> </span>-h<span class="w"> </span><span class="m">192</span>.168.10.1<span class="w"> </span>-p<span class="w"> </span><span class="m">15432</span><span class="w"> </span>-U<span class="w"> </span>editeur<span class="w"> </span>-d<span class="w"> </span>lucas
+
+<span class="se">\d</span><span class="w"> </span><span class="c1"># Lister le contenu de la BD</span>
+
+<span class="se">\d</span>t<span class="w"> </span>*.*<span class="w"> </span><span class="c1"># Lister toutes les tables de tous les schémas</span>
+
+<span class="se">\d</span>t<span class="w"> </span>tg.*<span class="w"> </span><span class="c1"># Lister toutes les tables du schéma &#39;tg&#39;</span>
+
+<span class="se">\q</span><span class="w"> </span><span class="c1"># Quit psql cli client</span>
+</code></pre></div>
+<p>&rArr; <a href="https://docs.postgresql.fr/13/app-psql.html">Doc psql</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -568,10 +665,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.expand", "content.code.copy", "content.code.annotate", "toc.integrate", "search.highlight", "search.suggest"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.instant", "navigation.expand", "content.code.copy", "content.code.annotate", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
