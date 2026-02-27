@@ -21,3 +21,8 @@ sudo apt install gdal-bin
 ogrinfo -so -al file.vrt
 ```
 
+## Generate a .vrt from .csv
+
+```sh
+ogr2vrt_cli generate-vrt -d -o fr-en-boursiers-par-departement.vrt fr-en-boursiers-par-departement.csv
+```

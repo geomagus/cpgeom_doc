@@ -16,7 +16,7 @@
         <link rel="prev" href="../interop/">
       
       
-        <link rel="next" href="../sources/">
+        <link rel="next" href="../ogr/">
       
       
         
@@ -269,6 +269,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../ogr/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  OGR/GDAL
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../sources/" class="md-tabs__link">
         
   
@@ -472,10 +491,70 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#format-dcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format DCAT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format XML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outils-de-catalogage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outils de catalogage
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OGR/GDAL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -552,21 +631,22 @@
 
 
 <h1 id="metadonnees">🏷️ Métadonnées<a class="headerlink" href="#metadonnees" title="Permanent link">&para;</a></h1>
-<p>Une métadonnée est une donnée relative à une autre donnée. Elle permet de donner davantage de contexte aux données ou fournir des directives précises sur leur traitement.</p>
+<p><em>Une métadonnée est une donnée relative à une autre donnée. Elle permet de donner davantage de contexte aux données ou fournir des directives précises sur leur traitement.</em></p>
 <pre class="mermaid"><code>graph TD
 
-    M((Métadonnées))
+    M((**Métadonnées**))
 
-    A[Référence de temps et de localisation]
-    B[Conditions d'accès et modalités d'utilisation]
-    C[Conditions et objectifs de la collecte]
-    D[Origine des données et identité du créateur]
+    A[**Référence de temps et de localisation**]
+    B[**Conditions d'accès et modalités d'utilisation**]
+    C[**Conditions et objectifs de la collecte**]
+    D[**Origine des données et identité du créateur**]
 
     M --- A
     M --- B
     M --- C
     M --- D</code></pre>
-<p><strong>Intérêts</strong> :</p>
+<hr />
+<p><strong>Les intérêts des métadonnées sont les suivants</strong> :</p>
 <ul>
 <li>Simplifier la recherche de la données</li>
 <li>Permettre l'ouverture des données</li>
@@ -575,10 +655,24 @@
 </ul>
 <h2 id="simplifier-le-partage-des-donnees">Simplifier le partage des données<a class="headerlink" href="#simplifier-le-partage-des-donnees" title="Permanent link">&para;</a></h2>
 <ul>
-<li>catalogue avec moteur de recherche</li>
-<li>normaliser le contenu (<span style="color:magenta"><strong>ISO 19115</strong></span>)</li>
-<li>normaliser la forme (<strong>ISO 19139</strong>)</li>
-<li>normaliser la diffusion (<strong>CSW</strong> : Catalog Service for the Web)</li>
+<li>Catalogue avec moteur de recherche</li>
+<li>Normaliser le contenu (<span style="color:magenta"><strong>ISO 19115</strong></span>)</li>
+<li>Normaliser la forme (<strong>ISO 19139</strong>)</li>
+<li>Normaliser la diffusion (<strong>CSW</strong> : Catalog Service for the Web)</li>
+</ul>
+<h2 id="format-dcat">Format DCAT<a class="headerlink" href="#format-dcat" title="Permanent link">&para;</a></h2>
+<p>Normalisation pour le Web et pour se diriger vers un Web sémantique.</p>
+<ul>
+<li><strong>DCAT-AP</strong> : Data-Catalog Vocabulary - Application Profile</li>
+<li><a href="https://knowledge-base.inspire.ec.europa.eu/evolution/good-practice-library/geodcat-ap_en"><strong>GeoDCAT-AP</strong></a></li>
+</ul>
+<h2 id="format-xml">Format XML<a class="headerlink" href="#format-xml" title="Permanent link">&para;</a></h2>
+<p>Le format XML est utilisé pour le stockage des métadonnées, la structure de balises à respecter est définie par la norme <strong>ISO 19139</strong>.</p>
+<h2 id="outils-de-catalogage">Outils de catalogage<a class="headerlink" href="#outils-de-catalogage" title="Permanent link">&para;</a></h2>
+<ul>
+<li>GeoNetwork (diffusion d'un catalogue au format CSW)</li>
+<li>CKAN : Comprehensive Knowledge Archive Network</li>
+<li>Très utilisé pour les portails open data</li>
 </ul>
 
 
