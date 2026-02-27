@@ -227,6 +227,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../bash/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Bash scripting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../interop/" class="md-tabs__link">
         
   
@@ -265,7 +284,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../ogr/" class="md-tabs__link">
+      <a href="../ogr-gdal/" class="md-tabs__link">
         
   
   
@@ -392,6 +411,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../interop/" class="md-nav__link">
         
   
@@ -446,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ogr/" class="md-nav__link">
+      <a href="../ogr-gdal/" class="md-nav__link">
         
   
   
@@ -592,6 +638,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#generate-a-vrt-from-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate a .vrt from .csv
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -633,6 +690,9 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gdal-bin
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>-so<span class="w"> </span>-al<span class="w"> </span>file.vrt
+</code></pre></div>
+<h2 id="generate-a-vrt-from-csv">Generate a .vrt from .csv<a class="headerlink" href="#generate-a-vrt-from-csv" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>ogr2vrt_cli<span class="w"> </span>generate-vrt<span class="w"> </span>-d<span class="w"> </span>-o<span class="w"> </span>fr-en-boursiers-par-departement.vrt<span class="w"> </span>fr-en-boursiers-par-departement.csv
 </code></pre></div>
 
 
