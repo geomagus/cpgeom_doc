@@ -508,10 +508,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#connexion-a-une-bd-postgresql-en-cli" class="md-nav__link">
+  <a href="#1-connexion-a-une-bd-postgresql-en-cli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connexion à une BD PostgreSQL en CLI
+        1. Connexion à une BD PostgreSQL en CLI
       
     </span>
   </a>
@@ -519,15 +519,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gdal-geo-data-abstraction-library" class="md-nav__link">
+  <a href="#2-gdal-geo-data-abstraction-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GDAL : Geo Data Abstraction Library
+        2. GDAL : Geo Data Abstraction Library
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="GDAL : Geo Data Abstraction Library">
+    <nav class="md-nav" aria-label="2. GDAL : Geo Data Abstraction Library">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -547,15 +547,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scripter-avec-gdal" class="md-nav__link">
+  <a href="#3-scripter-avec-gdal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scripter avec GDAL
+        3. Scripter avec GDAL
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Scripter avec GDAL">
+    <nav class="md-nav" aria-label="3. Scripter avec GDAL">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -687,7 +687,7 @@
 
 
 <h1 id="ogrgdal">OGR/GDAL<a class="headerlink" href="#ogrgdal" title="Permanent link">&para;</a></h1>
-<h2 id="connexion-a-une-bd-postgresql-en-cli">Connexion à une BD PostgreSQL en CLI<a class="headerlink" href="#connexion-a-une-bd-postgresql-en-cli" title="Permanent link">&para;</a></h2>
+<h2 id="1-connexion-a-une-bd-postgresql-en-cli">1. Connexion à une BD PostgreSQL en CLI<a class="headerlink" href="#1-connexion-a-une-bd-postgresql-en-cli" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>psql<span class="w"> </span>-h<span class="w"> </span><span class="m">192</span>.168.10.1<span class="w"> </span>-p<span class="w"> </span><span class="m">15432</span><span class="w"> </span>-U<span class="w"> </span>editeur<span class="w"> </span>-d<span class="w"> </span>lucas
 
 <span class="se">\d</span><span class="w"> </span><span class="c1"># Lister le contenu de la BD</span>
@@ -699,7 +699,7 @@
 <span class="se">\q</span><span class="w"> </span><span class="c1"># Quit psql cli client</span>
 </code></pre></div>
 <p>&rArr; <a href="https://docs.postgresql.fr/13/app-psql.html">Doc psql</a></p>
-<h2 id="gdal-geo-data-abstraction-library"><em>GDAL</em> : Geo Data Abstraction Library<a class="headerlink" href="#gdal-geo-data-abstraction-library" title="Permanent link">&para;</a></h2>
+<h2 id="2-gdal-geo-data-abstraction-library">2. <em>GDAL</em> : Geo Data Abstraction Library<a class="headerlink" href="#2-gdal-geo-data-abstraction-library" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>-so<span class="w"> </span>departement.shp<span class="w"> </span>departement<span class="w"> </span>&gt;&gt;<span class="w"> </span>def_dept.txt<span class="w"> </span><span class="c1"># Save info in a text file</span>
 
 ogr2ogr<span class="w"> </span>-where<span class="w"> </span><span class="s2">&quot;INSEE_DEP=&#39;38&#39;&quot;</span><span class="w"> </span>dep38.shp<span class="w"> </span>departement.shp<span class="w"> </span><span class="c1"># Keep only one departement</span>
@@ -717,7 +717,7 @@ gdalwarp<span class="w"> </span>-s_srs<span class="w"> </span>EPSG:3857<span cla
 
 ogr2ogr<span class="w"> </span>-of<span class="w"> </span><span class="s2">&quot;PostgreSQL&quot;</span><span class="w"> </span>PG:<span class="s2">&quot;dbname=lucas user=editeur password=editeur2026 host=192.168.10.1 port=15432&quot;</span><span class="w"> </span>-nln<span class="w"> </span>public.dept38<span class="w"> </span>-s_srs<span class="w"> </span>EPSG:4326<span class="w"> </span>-t_srs<span class="w"> </span>EPSG:2154<span class="w"> </span>WFS:https://data.geopf.fr/wfs/ows?SERVICE<span class="o">=</span>WFS<span class="w"> </span>BDTOPO_V3:departement<span class="w"> </span>-where<span class="w"> </span><span class="s2">&quot;code_insee=&#39;38&#39;&quot;</span>
 </code></pre></div>
-<h2 id="scripter-avec-gdal">Scripter avec <em>GDAL</em><a class="headerlink" href="#scripter-avec-gdal" title="Permanent link">&para;</a></h2>
+<h2 id="3-scripter-avec-gdal">3. Scripter avec <em>GDAL</em><a class="headerlink" href="#3-scripter-avec-gdal" title="Permanent link">&para;</a></h2>
 <h3 id="script-bash-simple">Script <em>bash</em> simple<a class="headerlink" href="#script-bash-simple" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
