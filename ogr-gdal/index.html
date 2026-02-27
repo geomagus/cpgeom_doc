@@ -519,17 +519,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#doc-psql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        &rArr; Doc psql
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#2-gdal-geo-data-abstraction-library" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -554,17 +543,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ogr2ogr-of-postgresql-pgdbnamelucas-userediteur-passwordediteur2026-host192168101-port15432-nln-publiccommune-nlt-multipolygon-s_srs-epsg2154-t_srs-epsg2154-communesh-ogr2ogr-of-postgresql-pgdbnamelucas-userediteur-passwordediteur2026-host192168101-port15432-nln-publicdept38-s_srs-epsg4326-t_srs-epsg2154-wfshttpsdatageopffrwfsowsservicewfs-bdtopo_v3departement-where-code_insee38" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ogr2ogr -of &quot;PostgreSQL&quot; PG:&quot;dbname=lucas user=editeur password=editeur2026 host=192.168.10.1 port=15432&quot; -nln public.commune -nlt MULTIPOLYGON -s_srs EPSG:2154 -t_srs EPSG:2154 COMMUNE.sh ogr2ogr -of &quot;PostgreSQL&quot; PG:&quot;dbname=lucas user=editeur password=editeur2026 host=192.168.10.1 port=15432&quot; -nln public.dept38 -s_srs EPSG:4326 -t_srs EPSG:2154 WFS:https://data.geopf.fr/wfs/ows?SERVICE=WFS BDTOPO_V3:departement -where &quot;code_insee=&#39;38&#39;&quot;
-      
-    </span>
-  </a>
   
 </li>
       
@@ -721,7 +699,8 @@
 
 <span class="se">\q</span><span class="w"> </span><span class="c1"># Quit psql cli client</span>
 </code></pre></div>
-<h2 id="doc-psql">&rArr; <a href="https://docs.postgresql.fr/13/app-psql.html">Doc psql</a><a class="headerlink" href="#doc-psql" title="Permanent link">&para;</a></h2>
+<p>&rArr; <a href="https://docs.postgresql.fr/13/app-psql.html">Doc psql</a></p>
+<hr />
 <h2 id="2-gdal-geo-data-abstraction-library">2. <em>GDAL</em> : Geo Data Abstraction Library<a class="headerlink" href="#2-gdal-geo-data-abstraction-library" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>ogrinfo<span class="w"> </span>-so<span class="w"> </span>departement.shp<span class="w"> </span>departement<span class="w"> </span>&gt;&gt;<span class="w"> </span>def_dept.txt<span class="w"> </span><span class="c1"># Save info in a text file</span>
 
@@ -736,10 +715,11 @@ gdalwarp<span class="w"> </span>-s_srs<span class="w"> </span>EPSG:3857<span cla
 -of<span class="w"> </span><span class="c1"># Output Format</span>
 </code></pre></div>
 <h3 id="ajout-dune-couche-en-bdd">Ajout d'une couche en BDD<a class="headerlink" href="#ajout-dune-couche-en-bdd" title="Permanent link">&para;</a></h3>
-<h2 id="ogr2ogr-of-postgresql-pgdbnamelucas-userediteur-passwordediteur2026-host192168101-port15432-nln-publiccommune-nlt-multipolygon-s_srs-epsg2154-t_srs-epsg2154-communesh-ogr2ogr-of-postgresql-pgdbnamelucas-userediteur-passwordediteur2026-host192168101-port15432-nln-publicdept38-s_srs-epsg4326-t_srs-epsg2154-wfshttpsdatageopffrwfsowsservicewfs-bdtopo_v3departement-where-code_insee38"><div class="highlight"><pre><span></span><code>ogr2ogr<span class="w"> </span>-of<span class="w"> </span><span class="s2">&quot;PostgreSQL&quot;</span><span class="w"> </span>PG:<span class="s2">&quot;dbname=lucas user=editeur password=editeur2026 host=192.168.10.1 port=15432&quot;</span><span class="w"> </span>-nln<span class="w"> </span>public.commune<span class="w"> </span>-nlt<span class="w"> </span>MULTIPOLYGON<span class="w"> </span>-s_srs<span class="w"> </span>EPSG:2154<span class="w"> </span>-t_srs<span class="w"> </span>EPSG:2154<span class="w"> </span>COMMUNE.sh<span class="w">  </span>
+<div class="highlight"><pre><span></span><code>ogr2ogr<span class="w"> </span>-of<span class="w"> </span><span class="s2">&quot;PostgreSQL&quot;</span><span class="w"> </span>PG:<span class="s2">&quot;dbname=lucas user=editeur password=editeur2026 host=192.168.10.1 port=15432&quot;</span><span class="w"> </span>-nln<span class="w"> </span>public.commune<span class="w"> </span>-nlt<span class="w"> </span>MULTIPOLYGON<span class="w"> </span>-s_srs<span class="w"> </span>EPSG:2154<span class="w"> </span>-t_srs<span class="w"> </span>EPSG:2154<span class="w"> </span>COMMUNE.sh<span class="w">  </span>
 
 ogr2ogr<span class="w"> </span>-of<span class="w"> </span><span class="s2">&quot;PostgreSQL&quot;</span><span class="w"> </span>PG:<span class="s2">&quot;dbname=lucas user=editeur password=editeur2026 host=192.168.10.1 port=15432&quot;</span><span class="w"> </span>-nln<span class="w"> </span>public.dept38<span class="w"> </span>-s_srs<span class="w"> </span>EPSG:4326<span class="w"> </span>-t_srs<span class="w"> </span>EPSG:2154<span class="w"> </span>WFS:https://data.geopf.fr/wfs/ows?SERVICE<span class="o">=</span>WFS<span class="w"> </span>BDTOPO_V3:departement<span class="w"> </span>-where<span class="w"> </span><span class="s2">&quot;code_insee=&#39;38&#39;&quot;</span>
-</code></pre></div><a class="headerlink" href="#ogr2ogr-of-postgresql-pgdbnamelucas-userediteur-passwordediteur2026-host192168101-port15432-nln-publiccommune-nlt-multipolygon-s_srs-epsg2154-t_srs-epsg2154-communesh-ogr2ogr-of-postgresql-pgdbnamelucas-userediteur-passwordediteur2026-host192168101-port15432-nln-publicdept38-s_srs-epsg4326-t_srs-epsg2154-wfshttpsdatageopffrwfsowsservicewfs-bdtopo_v3departement-where-code_insee38" title="Permanent link">&para;</a></h2>
+</code></pre></div>
+<hr />
 <h2 id="3-scripter-avec-gdal">3. Scripter avec <em>GDAL</em><a class="headerlink" href="#3-scripter-avec-gdal" title="Permanent link">&para;</a></h2>
 <h3 id="script-bash-simple">Script <em>bash</em> simple<a class="headerlink" href="#script-bash-simple" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
