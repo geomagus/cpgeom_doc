@@ -9,13 +9,15 @@
 
 <html><img src="../assets/image-1.png" alt="ogc" width="250"/></html>
 
-## 📜 Normes
+---
+## 1. Normes
 
 - **ISO 19115** (Métadonnées)
 - **ISO 19139** (Métadonnées)
 - **ISO 19157** (Qualité des données)
 
-## ⚙️ Géo standards (OGC)
+---
+## 2. Géo standards (OGC)
 
 ### FAIR
 - Findable
@@ -48,13 +50,17 @@ Données mises à disposition par un **serveur cartographique** (Geoserver, Maps
 <img id="crsImg" src="../assets/crs.png" alt="crs" width="100"/>
 </html>
 
-## Catalogue / Métadonnées
+---
+## 3. Catalogue / Métadonnées
+
 - Données de **qualité** (exhaustives, propres, géométriquement correctes)
 - Données **documentées** (normes 19115, 19139, INSPIRE)
 - Données **diffusables** (catalogue)
 - Données **réutilisables** (accessibles, ouvertes)
 
-## Spatial ETL : Extract Transform Load
+---
+## 4. Spatial ETL : Extract Transform Load
+
 - Reprojection
 - Transformations spatiales
 - Transformations topologiques
