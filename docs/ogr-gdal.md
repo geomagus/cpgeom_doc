@@ -6,14 +6,39 @@
 ```bash
 psql -h 192.168.10.1 -p 15432 -U editeur -d lucas
 
-\d # Lister le contenu de la BD
+\d # Lister le contenu de la BD 
+
+\d nom_table # Afficher les colonnes d'une tables
 
 \dt *.* # Lister toutes les tables de tous les schémas
 
 \dt tg.* # Lister toutes les tables du schéma 'tg'
 
+\dn # Lister tous les schémas (sans les ta\ dtbles)
+
 \q # Quit psql cli client
+
+\l # liste TOUTES LES BD avec info (tablespaces etc)
+
+\du # lister les utilisateurs
+
+\c ma_base # se connecter à une BD spécifique du serveur
 ```
+
+### Gérer une instance PostgreSQL dans linux
+
+```bash
+sudo apt installe postgresql
+
+sudo systemctl disable postgresql.service
+
+sudo systemctl start postgresql.service
+
+sudo systemctl status postgresql.service
+
+psql postgres postgres -p 5432
+```
+
 
 &rArr; [Doc psql](https://docs.postgresql.fr/13/app-psql.html)
 
