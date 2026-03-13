@@ -93,7 +93,9 @@
 
 ### Restrictions de diffusion
 - **droits d'auteur** (droits **moraux**, droits **patrimoniaux**/financiers)
-- **droit de producteur de nase de donnée** (prise de l'initiative et du risque des investissements)
+- **droit de producteur de base de donnée** (prise de l'initiative et du risque des investissements)
+
+![alt text](./assets/droits.png)
 
 ### Licences
 - Licence ouverte : **Etalab** (toutes les BDD IGN sauf SCAN)
@@ -249,6 +251,74 @@ Un administrateur peut être amené à déléguer auprès d'une autre personne l
 **Règle n°4** : contrôle physique des connexions.
 
 La connexion d'un utilisateur à une base de données peut être réalisée depuis n'importe où dans le monde grâce à Internet. Il est nécessaire de restreindre les connexions à des hôtes spécifiques connus (hba_conf).
+
+# Fiche de Révision — Qualité + Juridique
+
+## 1. Pyramide de la confiance
+
+La chaîne de confiance repose sur plusieurs niveaux successifs :
+
+1. **Qualité des données (élevée)**  
+   Le socle indispensable.
+
+2. **Données (exactes)**  
+   Produites selon des spécifications strictes.
+
+3. **Estimations (correctes)**  
+   Des analyses basées sur du factuel.
+
+4. **Décisions (bonnes)**  
+   L'aboutissement d'une chaîne de confiance intègre.
+
+---
+
+## 2. Concepts clés
+
+| Concept | Définition & Rôles | Exemples Clés |
+|---|---|---|
+| **Norme** | Règle fixant les conditions de réalisation pour assurer l'unification et l'interchangeabilité. | ISO 19157 (Qualité), ISO 19115 / ISO 19139 (Métadonnées) |
+| **Standard** | Référentiel commun destiné à harmoniser l'activité d'un secteur (État ou professionnels). | Standard CNIG PLU, EDIGEO (Cadastre) |
+
+---
+
+## 3. Gouvernance de la qualité
+
+**GT QuaDoGéo**  
+Le groupe pivot pour la veille et la transversalité autour de la qualité des données géographiques.
+
+### Qualité interne (producteur)
+
+Mesure l'écart entre :
+- les **spécifications**
+- et la **production réelle**
+
+Exemples d’éléments contrôlés :
+- codification
+- topologie
+- géoréférencement
+
+### Qualité externe (utilisateur)
+
+Évalue **l'utilisabilité de la donnée**.
+
+Une donnée peut être jugée **insuffisante** si elle ne répond pas au **besoin métier**, même si elle respecte les spécifications techniques.
+
+---
+
+## 4. Guide des stratégies d’échantillonnage
+
+| Catégorie    | Type                | Méthode                                                        | Cas d’usage                         |
+| --------------| ---------------------| ----------------------------------------------------------------| -------------------------------------|
+| Déterministe | Simple aléatoire    | Tirage pur au hasard de **N objets**                           | Contrôle rapide, lot très uniforme  |
+| Déterministe | Semi-aléatoire      | Sélection systématique (ex : une dalle toutes les 5 dalles)    | Couverture spatiale régulière       |
+| Déterministe | Aléatoire stratifié | Division en **strates** (ex : urbain vs rural) puis tirage     | Représentativité des sous-ensembles |
+| Orienté      | Entité vs Surface   | Basé sur le nombre d'objets (ex : 20 % des ponts) ou l’emprise | Ciblage selon le risque d’erreur    |
+
+---
+
+## 5. Indicateurs clés
+
+- **LAQ (Limite d’Acceptation de la Qualité)** : seuil permettant de déterminer si un lot de données est **acceptable ou rejeté** lors d’un contrôle qualité.
 
 
 
