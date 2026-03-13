@@ -267,6 +267,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../expose_olivier/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Expose olivier
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../git/" class="md-tabs__link">
         
   
@@ -543,6 +562,33 @@
     
   
     Cli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expose_olivier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expose olivier
   
 
     
@@ -1696,6 +1742,108 @@
 <p>Un administrateur peut être amené à déléguer auprès d'une autre personne les tâches d'attribution des privilèges de tout ou partie de la population des utilisateurs (cf WITH GRANT OPTION). Un contrôle a posteriori doit être réalisé afin de vérifier que le résultat de cette délégation est conforme à la politique adoptée.</p>
 <p><strong>Règle n°4</strong> : contrôle physique des connexions.</p>
 <p>La connexion d'un utilisateur à une base de données peut être réalisée depuis n'importe où dans le monde grâce à Internet. Il est nécessaire de restreindre les connexions à des hôtes spécifiques connus (hba_conf).</p>
+<h1 id="fiche-de-revision-qualite-juridique">Fiche de Révision — Qualité + Juridique<a class="headerlink" href="#fiche-de-revision-qualite-juridique" title="Permanent link">&para;</a></h1>
+<h2 id="1-pyramide-de-la-confiance">1. Pyramide de la confiance<a class="headerlink" href="#1-pyramide-de-la-confiance" title="Permanent link">&para;</a></h2>
+<p>La chaîne de confiance repose sur plusieurs niveaux successifs :</p>
+<ol>
+<li>
+<p><strong>Qualité des données (élevée)</strong><br />
+   Le socle indispensable.</p>
+</li>
+<li>
+<p><strong>Données (exactes)</strong><br />
+   Produites selon des spécifications strictes.</p>
+</li>
+<li>
+<p><strong>Estimations (correctes)</strong><br />
+   Des analyses basées sur du factuel.</p>
+</li>
+<li>
+<p><strong>Décisions (bonnes)</strong><br />
+   L'aboutissement d'une chaîne de confiance intègre.</p>
+</li>
+</ol>
+<hr />
+<h2 id="2-concepts-cles">2. Concepts clés<a class="headerlink" href="#2-concepts-cles" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Définition &amp; Rôles</th>
+<th>Exemples Clés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Norme</strong></td>
+<td>Règle fixant les conditions de réalisation pour assurer l'unification et l'interchangeabilité.</td>
+<td>ISO 19157 (Qualité), ISO 19115 / ISO 19139 (Métadonnées)</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Référentiel commun destiné à harmoniser l'activité d'un secteur (État ou professionnels).</td>
+<td>Standard CNIG PLU, EDIGEO (Cadastre)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-gouvernance-de-la-qualite">3. Gouvernance de la qualité<a class="headerlink" href="#3-gouvernance-de-la-qualite" title="Permanent link">&para;</a></h2>
+<p><strong>GT QuaDoGéo</strong><br />
+Le groupe pivot pour la veille et la transversalité autour de la qualité des données géographiques.</p>
+<h3 id="qualite-interne-producteur">Qualité interne (producteur)<a class="headerlink" href="#qualite-interne-producteur" title="Permanent link">&para;</a></h3>
+<p>Mesure l'écart entre :
+- les <strong>spécifications</strong>
+- et la <strong>production réelle</strong></p>
+<p>Exemples d’éléments contrôlés :
+- codification
+- topologie
+- géoréférencement</p>
+<h3 id="qualite-externe-utilisateur">Qualité externe (utilisateur)<a class="headerlink" href="#qualite-externe-utilisateur" title="Permanent link">&para;</a></h3>
+<p>Évalue <strong>l'utilisabilité de la donnée</strong>.</p>
+<p>Une donnée peut être jugée <strong>insuffisante</strong> si elle ne répond pas au <strong>besoin métier</strong>, même si elle respecte les spécifications techniques.</p>
+<hr />
+<h2 id="4-guide-des-strategies-dechantillonnage">4. Guide des stratégies d’échantillonnage<a class="headerlink" href="#4-guide-des-strategies-dechantillonnage" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Type</th>
+<th>Méthode</th>
+<th>Cas d’usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Déterministe</td>
+<td>Simple aléatoire</td>
+<td>Tirage pur au hasard de <strong>N objets</strong></td>
+<td>Contrôle rapide, lot très uniforme</td>
+</tr>
+<tr>
+<td>Déterministe</td>
+<td>Semi-aléatoire</td>
+<td>Sélection systématique (ex : une dalle toutes les 5 dalles)</td>
+<td>Couverture spatiale régulière</td>
+</tr>
+<tr>
+<td>Déterministe</td>
+<td>Aléatoire stratifié</td>
+<td>Division en <strong>strates</strong> (ex : urbain vs rural) puis tirage</td>
+<td>Représentativité des sous-ensembles</td>
+</tr>
+<tr>
+<td>Orienté</td>
+<td>Entité vs Surface</td>
+<td>Basé sur le nombre d'objets (ex : 20 % des ponts) ou l’emprise</td>
+<td>Ciblage selon le risque d’erreur</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-indicateurs-cles">5. Indicateurs clés<a class="headerlink" href="#5-indicateurs-cles" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>LAQ (Limite d’Acceptation de la Qualité)</strong> : seuil permettant de déterminer si un lot de données est <strong>acceptable ou rejeté</strong> lors d’un contrôle qualité.</li>
+</ul>
 
 
 
